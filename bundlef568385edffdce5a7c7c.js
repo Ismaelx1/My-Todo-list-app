@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 15vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 85vh;\n    background-color: blue;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;IACI,UAAU;IACV,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;AACnB;;;AAGA;IACI,YAAY;IACZ,YAAY;IACZ,sBAAsB;AAC1B","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');\n\nbody {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 15vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 85vh;\n    background-color: blue;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 80vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n}\n\n.navdiv > div {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n}\n\n.navdiv > div:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\n\n \n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\nalign-self: flex-end;\n\n\n\n}\n#addBtn {\n   \n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n \n}\n\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;IACI,UAAU;IACV,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;AACnB;;;AAGA;IACI,YAAY;IACZ,YAAY;;IAEZ,aAAa;;AAEjB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;;AAEjC;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;IACf,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;IACf,gCAAgC;AACpC;;AAEA;IACI,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;;;AAGjB;AACA;AACA,aAAa;AACb,WAAW;AACX,YAAY;AACZ,cAAc;AACd,oBAAoB;;;;AAIpB;AACA;;IAEI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;;AAEnB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');\n\nbody {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 80vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n}\n\n.navdiv > div {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n}\n\n.navdiv > div:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\n\n \n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\nalign-self: flex-end;\n\n\n\n}\n#addBtn {\n   \n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n \n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -608,9 +608,21 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 
-console.log("sick")
+
+
+
+const nav = document.querySelector('.navdiv')
+const addBtn = document.getElementById('addBtn')
+
+nav.addEventListener('click', () => {
+
+})
+
+addBtn.addEventListener('click',() => {
+    console.log("HOOOOOOO")
+})
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlea0263f9730b1bd2703e8.js.map
+//# sourceMappingURL=bundlef568385edffdce5a7c7c.js.map
