@@ -1,2 +1,14 @@
 import './styles/main.css'
-console.log("sick")
+
+
+
+const nav = document.querySelector('.navdiv')
+const addBtn = document.getElementById('addBtn')
+
+nav.addEventListener('click', () => {
+
+})
+
+addBtn.addEventListener('click',() => {
+    console.log("HOOOOOOO")
+})
