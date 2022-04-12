@@ -9,6 +9,14 @@ nav.addEventListener('click', () => {
 
 })
 
-addBtn.addEventListener('click',() => {
-    console.log("HOOOOOOO")
-})
+addBtn.addEventListener('click',add)
+
+
+
+function add() {
+    const container = document.getElementById('taskdiv')
+    const div = document.createElement('div')
+    div.classList.add('s')
+    container.append(div)
+
+}
