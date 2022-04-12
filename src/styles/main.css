@@ -103,10 +103,72 @@ margin: 0 auto;
 
 
 }
-#addBtn {
+#showBtn {
    
  
     cursor: pointer;
  
 }
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    gap: 5px;
+    align-content: center;
+    justify-content: center;
+    height: 200px;
+ width: 500px;
+ visibility: hidden;
+position: absolute;
+margin-top: 150px;
+margin-left: 550px;
+background-color: #090a23;
+background-size: cover;
+border-radius: 10px;
+text-align: center;
+}
+.form > button {
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 900;
+   
+
+    
+
+}
+.form > button:hover {
+    background-color: lightslategray;
+}
+.form > input {
+    width: 200px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-self: center;
+    padding-left: 5px;
+ 
+   
+}
+#taskName {
+    width: 400px;
+}
+#taskDesc {
+    width: 350px;
+    height: 60px;
+}
+
 
