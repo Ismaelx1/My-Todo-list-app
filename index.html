@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Todo App</title>
-<script defer src="bundlea8dc1f8773c524e73c2f.js"></script></head>
+<script defer src="bundle1a8e8a876540e67c4d36.js"></script></head>
 <body>
 <header class="header">
     <h1>My Todo App!</h1>
@@ -18,7 +18,10 @@
         <input type="text" id="taskDesc" placeholder="Description (Optional)" required>
 
   
+        <label for="appt">Choose a due date for the task:</label>
 
+        <input type="date" id="appt" name="appt"
+                required>
 
         <button type="button" id="addTask">Add Task</button>
         <button type="button" id="exitform">Exit!</button>
@@ -36,15 +39,38 @@
             
            <div class="s">
                <div class="txtTask">
-                   <h1>Go for a walk</h1>
-                   <p>Go for a walk because I need the Sun loveit</p>
+                        <div class="taskname">Walking Sun</div>
+                        <div class="taskdes">I need to walk in the sun man we need some vitamine D otherwise its shit</div>
+                        <div class="duedate">Before: 16/3/2020</div>
                </div>
                <div class="btnTask">
-                   <button>D</button>
-                   <button>S</button>
+                   <button></button>
+                   <button></button>
                 </div>
            </div>
      
+
+
+
+
+           <div class="s">
+            <div class="txtTask">
+                     <div class="taskname">Walking Sun</div>
+                     <div class="taskdes">I need to walk in the sun man we need some vitamine D otherwise its shit he sun man we need some vitamine D otherwise its sh he sun man we need some vitamine D otherwise its sh</div>
+                     <div class="duedate">Before: 16/3/2020</div>
+            </div>
+            <div class="btnTask">
+                <button>Done</button>
+                <button>Delete</button>
+             </div>
+        </div>
+
+
+
+
+
+
+
           </div>
             <div class="btn">
                 <img id="showBtn" src="../src/assets/icons8-plus-64.png" alt="Plus Sign">
