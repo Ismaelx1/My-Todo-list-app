@@ -11,6 +11,8 @@ const addTask = document.querySelector('#addTask')
 const taskInput = document.querySelector('#taskName')
 const descInput = document.querySelector('#taskDesc')
 const container = document.getElementById('taskdiv')
+const inputDate = document.querySelector('#appt')
+
 
 let myTasks = [];
 
@@ -23,33 +25,39 @@ console.log(e)
 
 function renderTasks() {
 
-   myTasks.forEach((task, desc) => {
+   myTasks.forEach((task, desc, date) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
     const divBtn = document.createElement('div')
+    const taskName = document.createElement('div')
+    const taskDescrip = document.createElement('div')
+    const dueDate = document.createElement('div')
     const doneBtn = document.createElement('button')
     const removeBtn = document.createElement('button')
-    const txtH = document.createElement('h1')
-    const txtDesc = document.createElement('p')
-
-Object.keys(task, desc).forEach(item => {
-    txtH.innerText = task[item];
-    txtDesc.innerText = desc[item];
-
-})
     div.classList.add('s')
     divTxt.classList.add('txtTask')
     divBtn.classList.add('btnTask')
+    taskName.classList.add('taskname')
+    taskDescrip.classList.add('taskdes')
+    dueDate.classList.add('duedate')
    
+
+
+
+
     container.append(div)
     div.append(divTxt)
     div.append(divBtn)
-    divTxt.append(txtH)
-    divTxt.append(txtDesc)
+    divTxt.append(taskName)
+    divTxt.append(taskDescrip)
+    divTxt.append(dueDate)
     divBtn.append(doneBtn)
     divBtn.append(removeBtn)
 
 
+    
+    taskDescrip.textContent = desc
+    dueDate.textContent = date
    })
    taskInput.value = ''
    descInput.value = ''
@@ -71,31 +79,28 @@ function showForm() {
 
 
 
-function Task(task, description) {
+function Task(task, description, date) {
     this.task = task,
-    this.desc = description
+    this.desc = description,
+    this.date = date
 }
 
 function addtask() {
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
-    let newTask = new Task(taskpara, descriptionpara)
+    let datee = inputDate.value
+    let newTask = new Task(taskpara, descriptionpara, datee)
     myTasks.push(newTask)
 
 taskInput.value = ''
 descInput.value = ''
+
     console.log(myTasks)
     renderTasks()
 
 }
 
 
-const obj = {
-    name: 'Jean-Luc Picard',
-    rank: 'Captain'
-  };
 
-  // Prints "name Jean-Luc Picard" followed by "rank Captain"
-  Object.keys(obj).forEach(key => {
-    console.log(key, obj[key]);
-   });
+
+

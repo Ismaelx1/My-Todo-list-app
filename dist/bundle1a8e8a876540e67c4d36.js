@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 82vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n}\n\n.navdiv > div {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n\n}\n\n.navdiv > div:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: center;\n    row-gap: 10px;\n    column-gap: 10px;\n  \n}\n\n\n.s {\n    height: 180px;\n    width: 220px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n}\n.txtTask {\nwidth: fit-content;\nheight: fit-content;\nbackground-color: #ccc;\nmargin-top: 10px;\n\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 110px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 200px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 150px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;IACI,UAAU;IACV,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;AACnB;;;AAGA;IACI,YAAY;IACZ,YAAY;;IAEZ,aAAa;;AAEjB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;;AAEjC;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;IACf,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;IACf,gCAAgC;;AAEpC;;AAEA;IACI,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;AACjB,sBAAsB;;;;AAItB;AACA;IACI,WAAW;IACX,mBAAmB;;IAEnB,aAAa;IACb,eAAe;;IAEf,uBAAuB;IACvB,aAAa;IACb,gBAAgB;;AAEpB;;;AAGA;IACI,aAAa;IACb,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;IAChB,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,8BAA8B;AAClC;AACA;AACA,kBAAkB;AAClB,mBAAmB;AACnB,sBAAsB;AACtB,gBAAgB;;AAEhB;AACA;EACE,aAAa;;AAEf;AACA;IACI,YAAY;IACZ,YAAY;AAChB;AACA;AACA,aAAa;AACb,WAAW;AACX,YAAY;AACZ,cAAc;;;;;AAKd;AACA;;;IAGI,eAAe;;AAEnB;;;;;AAKA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,QAAQ;IACR,qBAAqB;IACrB,uBAAuB;IACvB,aAAa;CAChB,YAAY;CACZ,kBAAkB;AACnB,kBAAkB;AAClB,iBAAiB;AACjB,kBAAkB;AAClB,yBAAyB;AACzB,sBAAsB;AACtB,mBAAmB;AACnB,kBAAkB;AAClB;AACA;IACI,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,YAAY;IACZ,eAAe;IACf,aAAa;IACb,kBAAkB;IAClB,qBAAqB;IACrB,eAAe;IACf,gBAAgB;;;;;AAKpB;AACA;IACI,gCAAgC;AACpC;AACA;IACI,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,kBAAkB;IAClB,uBAAuB;IACvB,aAAa;IACb,kBAAkB;IAClB,iBAAiB;;;AAGrB;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ,YAAY;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');\n\nbody {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 82vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n}\n\n.navdiv > div {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n\n}\n\n.navdiv > div:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: center;\n    row-gap: 10px;\n    column-gap: 10px;\n  \n}\n\n\n.s {\n    height: 180px;\n    width: 220px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n}\n.txtTask {\nwidth: fit-content;\nheight: fit-content;\nbackground-color: #ccc;\nmargin-top: 10px;\n\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 110px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 200px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 150px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 82vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n}\n\n.navdiv > div {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n\n}\n\n.navdiv > div:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: center;\n    row-gap: 10px;\n    column-gap: 10px;\n  \n}\n\n\n.s {\n    height: fit-content;\n    width: 280px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n}\n.txtTask {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 10px 10px 0px 10px;\n\n}\n.taskname {\n\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n    font-weight: bolder;\n\n}\n\n.taskdes {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n\n\n}\n\n.duedate {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 140px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 300px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 70px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n\n.form > label {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;IACI,UAAU;IACV,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;AACnB;;;AAGA;IACI,YAAY;IACZ,YAAY;;IAEZ,aAAa;;AAEjB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;;AAEjC;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;IACf,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;IACf,gCAAgC;;AAEpC;;AAEA;IACI,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,aAAa;AACjB,sBAAsB;;;;AAItB;AACA;IACI,WAAW;IACX,mBAAmB;;IAEnB,aAAa;IACb,eAAe;;IAEf,uBAAuB;IACvB,aAAa;IACb,gBAAgB;;AAEpB;;;AAGA;IACI,mBAAmB;IACnB,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;IAChB,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,8BAA8B;AAClC;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,2BAA2B;;AAE/B;AACA;;IAEI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;;;AAGnB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;IACf,iBAAiB;IACjB,eAAe;AACnB;AACA;EACE,aAAa;;AAEf;AACA;IACI,YAAY;IACZ,YAAY;AAChB;AACA;AACA,aAAa;AACb,WAAW;AACX,YAAY;AACZ,cAAc;;;;;AAKd;AACA;;;IAGI,eAAe;;AAEnB;;;;;AAKA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,QAAQ;IACR,qBAAqB;IACrB,uBAAuB;IACvB,aAAa;CAChB,YAAY;CACZ,kBAAkB;AACnB,kBAAkB;AAClB,gBAAgB;AAChB,kBAAkB;AAClB,yBAAyB;AACzB,sBAAsB;AACtB,mBAAmB;AACnB,kBAAkB;AAClB;AACA;IACI,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,YAAY;IACZ,eAAe;IACf,aAAa;IACb,kBAAkB;IAClB,qBAAqB;IACrB,eAAe;IACf,gBAAgB;;;;;AAKpB;;AAEA;IACI,cAAc;IACd,yDAAyD;IACzD,kBAAkB;IAClB,eAAe;AACnB;AACA;IACI,gCAAgC;AACpC;AACA;IACI,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,kBAAkB;IAClB,uBAAuB;IACvB,aAAa;IACb,kBAAkB;IAClB,iBAAiB;;;AAGrB;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ,YAAY;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');\n\nbody {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 82vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n}\n\n.navdiv > div {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n\n}\n\n.navdiv > div:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: center;\n    row-gap: 10px;\n    column-gap: 10px;\n  \n}\n\n\n.s {\n    height: fit-content;\n    width: 280px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n}\n.txtTask {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 10px 10px 0px 10px;\n\n}\n.taskname {\n\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n    font-weight: bolder;\n\n}\n\n.taskdes {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n\n\n}\n\n.duedate {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 140px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 300px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 70px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n\n.form > label {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -620,6 +620,8 @@ const addTask = document.querySelector('#addTask')
 const taskInput = document.querySelector('#taskName')
 const descInput = document.querySelector('#taskDesc')
 const container = document.getElementById('taskdiv')
+const inputDate = document.querySelector('#appt')
+
 
 let myTasks = [];
 
@@ -632,33 +634,39 @@ console.log(e)
 
 function renderTasks() {
 
-   myTasks.forEach((task, desc) => {
+   myTasks.forEach((task, desc, date) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
     const divBtn = document.createElement('div')
+    const taskName = document.createElement('div')
+    const taskDescrip = document.createElement('div')
+    const dueDate = document.createElement('div')
     const doneBtn = document.createElement('button')
     const removeBtn = document.createElement('button')
-    const txtH = document.createElement('h1')
-    const txtDesc = document.createElement('p')
-
-Object.keys(task, desc).forEach(item => {
-    txtH.innerText = task[item];
-    txtDesc.innerText = desc[item];
-
-})
     div.classList.add('s')
     divTxt.classList.add('txtTask')
     divBtn.classList.add('btnTask')
+    taskName.classList.add('taskname')
+    taskDescrip.classList.add('taskdes')
+    dueDate.classList.add('duedate')
    
+
+
+
+
     container.append(div)
     div.append(divTxt)
     div.append(divBtn)
-    divTxt.append(txtH)
-    divTxt.append(txtDesc)
+    divTxt.append(taskName)
+    divTxt.append(taskDescrip)
+    divTxt.append(dueDate)
     divBtn.append(doneBtn)
     divBtn.append(removeBtn)
 
 
+    
+    taskDescrip.textContent = desc
+    dueDate.textContent = date
    })
    taskInput.value = ''
    descInput.value = ''
@@ -680,36 +688,34 @@ function showForm() {
 
 
 
-function Task(task, description) {
+function Task(task, description, date) {
     this.task = task,
-    this.desc = description
+    this.desc = description,
+    this.date = date
 }
 
 function addtask() {
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
-    let newTask = new Task(taskpara, descriptionpara)
+    let datee = inputDate.value
+    let newTask = new Task(taskpara, descriptionpara, datee)
     myTasks.push(newTask)
 
 taskInput.value = ''
 descInput.value = ''
+
     console.log(myTasks)
     renderTasks()
 
 }
 
 
-const obj = {
-    name: 'Jean-Luc Picard',
-    rank: 'Captain'
-  };
 
-  // Prints "name Jean-Luc Picard" followed by "rank Captain"
-  Object.keys(obj).forEach(key => {
-    console.log(key, obj[key]);
-   });
+
+
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlea8dc1f8773c524e73c2f.js.map
+//# sourceMappingURL=bundle1a8e8a876540e67c4d36.js.map

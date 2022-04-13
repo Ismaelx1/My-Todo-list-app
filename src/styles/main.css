@@ -85,8 +85,8 @@ flex-direction: column;
 
 
 .s {
-    height: 180px;
-    width: 220px;
+    height: fit-content;
+    width: 280px;
     background-color: #090a23;
     border-radius: 10px;
     margin-top: 10px;
@@ -97,11 +97,39 @@ flex-direction: column;
     justify-content: space-between;
 }
 .txtTask {
-width: fit-content;
-height: fit-content;
-background-color: #ccc;
-margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 0px 10px;
 
+}
+.taskname {
+
+    color: #ffffff;
+    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bolder;
+
+}
+
+.taskdes {
+    color: #ffffff;
+    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+
+
+}
+
+.duedate {
+    color: #ffffff;
+    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
 }
 .btnTask {
   display: flex;
@@ -109,7 +137,7 @@ margin-top: 10px;
 }
 button {
     height: 30px;
-    width: 110px;
+    width: 140px;
 }
 .btn {
 display: flex;
@@ -138,11 +166,11 @@ margin: 0 auto;
     gap: 5px;
     align-content: center;
     justify-content: center;
-    height: 200px;
+    height: 300px;
  width: 500px;
  visibility: hidden;
 position: absolute;
-margin-top: 150px;
+margin-top: 70px;
 margin-left: 550px;
 background-color: #090a23;
 background-size: cover;
@@ -164,6 +192,13 @@ text-align: center;
 
     
 
+}
+
+.form > label {
+    color: #ffffff;
+    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-size: 15px;
 }
 .form > button:hover {
     background-color: lightslategray;
