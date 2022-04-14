@@ -1,4 +1,6 @@
 
+import { val } from 'cheerio/lib/api/attributes'
+import { index } from 'cheerio/lib/api/traversing'
 import './styles/main.css'
 
 
@@ -12,6 +14,9 @@ const taskInput = document.querySelector('#taskName')
 const descInput = document.querySelector('#taskDesc')
 const container = document.getElementById('taskdiv')
 const inputDate = document.querySelector('#appt')
+const prioInput = document.getElementById('priority')
+
+
 
 
 let myTasks = [];
@@ -25,7 +30,7 @@ console.log(e)
 
 function renderTasks() {
 
-   myTasks.forEach((task, desc, date) => {
+   myTasks.forEach((task) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
     const divBtn = document.createElement('div')
@@ -34,13 +39,27 @@ function renderTasks() {
     const dueDate = document.createElement('div')
     const doneBtn = document.createElement('button')
     const removeBtn = document.createElement('button')
+    const prioDiv = document.createElement('div')
     div.classList.add('s')
     divTxt.classList.add('txtTask')
     divBtn.classList.add('btnTask')
     taskName.classList.add('taskname')
     taskDescrip.classList.add('taskdes')
     dueDate.classList.add('duedate')
+    prioDiv.classList.add('priotask')
    
+Object.keys(task).forEach((prop, index) => {
+        console.log(prop, index, task[prop])
+  if (prop === 'task') {
+      taskName.textContent = task[prop]
+  } else if (prop === 'desc') {
+      taskDescrip.textContent = task[prop]
+  } else if (prop === 'date') {
+      dueDate.textContent = 'Before:' + ' ' + task[prop]
+  } else if (prop === 'priority') {
+      prioDiv.textContent = `Priority:` + ' ' + task[prop]
+  }
+})
 
 
 
@@ -51,19 +70,21 @@ function renderTasks() {
     divTxt.append(taskName)
     divTxt.append(taskDescrip)
     divTxt.append(dueDate)
+    divTxt.append(prioDiv)
     divBtn.append(doneBtn)
     divBtn.append(removeBtn)
 
 
     
-    taskDescrip.textContent = desc
-    dueDate.textContent = date
+ 
    })
    taskInput.value = ''
    descInput.value = ''
     exitForm()
 
 }
+
+
 btnExit.addEventListener('click', exitForm)
 addTask.addEventListener('click',addtask)
 showBtn.addEventListener('click', showForm)
@@ -79,17 +100,20 @@ function showForm() {
 
 
 
-function Task(task, description, date) {
+function Task(task, description, date, priority) {
     this.task = task,
     this.desc = description,
-    this.date = date
+    this.date = date,
+    this.priority = priority
+    
 }
 
 function addtask() {
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
     let datee = inputDate.value
-    let newTask = new Task(taskpara, descriptionpara, datee)
+    let priority = prioInput.value
+    let newTask = new Task(taskpara, descriptionpara, datee, priority)
     myTasks.push(newTask)
 
 taskInput.value = ''
