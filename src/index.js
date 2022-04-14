@@ -1,6 +1,5 @@
 
-import { val } from 'cheerio/lib/api/attributes'
-import { index } from 'cheerio/lib/api/traversing'
+
 import './styles/main.css'
 
 
@@ -30,7 +29,7 @@ console.log(e)
 
 function renderTasks() {
 
-   myTasks.forEach((task) => {
+   myTasks.forEach((task, index) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
     const divBtn = document.createElement('div')
@@ -38,7 +37,7 @@ function renderTasks() {
     const taskDescrip = document.createElement('div')
     const dueDate = document.createElement('div')
     const doneBtn = document.createElement('button')
-    const removeBtn = document.createElement('button')
+  
     const prioDiv = document.createElement('div')
     div.classList.add('s')
     divTxt.classList.add('txtTask')
@@ -74,8 +73,17 @@ function renderTasks() {
     divTxt.append(taskDescrip)
     divTxt.append(dueDate)
     divTxt.append(prioDiv)
+
+    doneBtn.textContent = 'Done'
     divBtn.append(doneBtn)
-    divBtn.append(removeBtn)
+
+
+
+
+
+
+divBtn.appendChild(createDelete(index));
+   
    })
    taskInput.value = ''
    descInput.value = ''
@@ -117,12 +125,19 @@ function addtask() {
 taskInput.value = ''
 descInput.value = ''
 
-    console.log(myTasks)
-    renderTasks()
-
+   renderTasks()
+  myTasks = []
 }
 
+function createDelete(man) {
+  const removeBtn = document.createElement('button')
 
+  removeBtn.textContent = 'Remove'
+removeBtn.addEventListener('click', () => {
+  myTasks.splice(man, 1)
+  renderTasks()
+ 
 
-
-
+})
+return removeBtn
+} 

@@ -77,16 +77,17 @@ flex-direction: column;
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: center;
+    justify-content: flex-start;
     row-gap: 10px;
     column-gap: 10px;
+   
   
 }
 
 
 .s {
     height: fit-content;
-    width: 280px;
+    width: 250px;
     background-color: #090a23;
     border-radius: 10px;
     margin-top: 10px;
@@ -95,6 +96,7 @@ flex-direction: column;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-left: 20px;
 }
 .txtTask {
     display: flex;
@@ -148,7 +150,7 @@ flex-direction: column;
 }
 button {
     height: 30px;
-    width: 140px;
+    width: 125px;
 }
 .btn {
 display: flex;
