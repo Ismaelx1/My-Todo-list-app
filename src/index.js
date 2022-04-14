@@ -48,21 +48,24 @@ function renderTasks() {
     dueDate.classList.add('duedate')
     prioDiv.classList.add('priotask')
    
-Object.keys(task).forEach((prop, index) => {
+
+
+    Object.keys(task).forEach((prop, index) => {
         console.log(prop, index, task[prop])
-  if (prop === 'task') {
+    if (prop === 'task') {
       taskName.textContent = task[prop]
-  } else if (prop === 'desc') {
+    } else if (prop === 'desc') {
       taskDescrip.textContent = task[prop]
-  } else if (prop === 'date') {
+    } else if (prop === 'date') {
       dueDate.textContent = 'Before:' + ' ' + task[prop]
-  } else if (prop === 'priority') {
+    } else if (prop === 'priority') {
       prioDiv.textContent = `Priority:` + ' ' + task[prop]
-  }
-})
-
-
-
+    }
+    })
+// taskName.textContent = task.task
+// taskDescrip.textContent = task.desc
+// dueDate.textContent = task.date
+// prioDiv.textContent = task.priority
 
     container.append(div)
     div.append(divTxt)
@@ -73,15 +76,10 @@ Object.keys(task).forEach((prop, index) => {
     divTxt.append(prioDiv)
     divBtn.append(doneBtn)
     divBtn.append(removeBtn)
-
-
-    
- 
    })
    taskInput.value = ''
    descInput.value = ''
     exitForm()
-
 }
 
 
