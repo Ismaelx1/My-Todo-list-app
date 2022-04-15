@@ -45,7 +45,9 @@ function renderTasks() {
     taskDescrip.classList.add('taskdes')
     dueDate.classList.add('duedate')
     prioDiv.classList.add('priotask')
-   
+
+
+
 
 
     Object.keys(task).forEach((prop) => {
@@ -73,8 +75,8 @@ function renderTasks() {
     divTxt.append(dueDate)
     divTxt.append(prioDiv)
 
-    doneBtn.textContent = 'Done'
-    divBtn.appendChild(doneBtn)
+  
+    divBtn.appendChild(doneEffect(task, div))
   //  removeBtn.textContent = 'Remove'
     // divBtn.append(removeBtn)
 
@@ -98,6 +100,16 @@ renderTasks()
 
   })
   return removeBtn
+}
+function doneEffect(task, had) {
+  const doneBtn = document.createElement('button')
+  doneBtn.textContent = 'Done'
+  doneBtn.addEventListener('click', () => {
+    task.done = true;
+    had.classList.add('newone')
+    
+  })
+  return doneBtn
 }
 
 // function createDelete(index, arr) {
@@ -128,12 +140,13 @@ function Task(task, description, date, priority) {
     this.task = task,
     this.desc = description,
     this.date = date,
-    this.priority = priority
+    this.priority = priority,
+    this.done = false
     
 }
 
 function addtask() {
-  const contentDiv = document.querySelector('.taskdiv')
+
 
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
@@ -146,6 +159,6 @@ taskInput.value = ''
 descInput.value = ''
 
    renderTasks()
-
+   console.log(myTasks)
 }
 
