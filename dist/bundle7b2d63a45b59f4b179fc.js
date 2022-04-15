@@ -629,9 +629,7 @@ const prioInput = document.getElementById('priority')
 
 let myTasks = [];
 
-nav.addEventListener('click', (e) => {
-console.log(e)
-})
+
 
 renderTasks()
 
@@ -657,7 +655,7 @@ function renderTasks() {
     dueDate.classList.add('duedate')
     prioDiv.classList.add('priotask')
    
-console.log(myTasks)
+
 
     Object.keys(task).forEach((prop) => {
       
@@ -706,7 +704,7 @@ removeBtn.textContent = 'Remove'
     myTasks.splice(index, 1)
 
 renderTasks()
-console.log(myTasks)
+
   })
   return removeBtn
 }
@@ -745,7 +743,7 @@ function Task(task, description, date, priority) {
 
 function addtask() {
   const contentDiv = document.querySelector('.taskdiv')
-  console.log(contentDiv)
+
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
     let datee = inputDate.value
@@ -765,4 +763,4 @@ descInput.value = ''
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlee73609a98fcaeae02d55.js.map
+//# sourceMappingURL=bundle7b2d63a45b59f4b179fc.js.map
