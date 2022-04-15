@@ -24,11 +24,12 @@ nav.addEventListener('click', (e) => {
 console.log(e)
 })
 
+renderTasks()
 
 
 
 function renderTasks() {
-
+  container.innerHTML = ''
    myTasks.forEach((task, index) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
@@ -37,7 +38,7 @@ function renderTasks() {
     const taskDescrip = document.createElement('div')
     const dueDate = document.createElement('div')
     const doneBtn = document.createElement('button')
-  
+  //  const removeBtn = document.createElement('button')
     const prioDiv = document.createElement('div')
     div.classList.add('s')
     divTxt.classList.add('txtTask')
@@ -47,10 +48,10 @@ function renderTasks() {
     dueDate.classList.add('duedate')
     prioDiv.classList.add('priotask')
    
+console.log(myTasks)
 
-
-    Object.keys(task).forEach((prop, index) => {
-        console.log(prop, index, task[prop])
+    Object.keys(task).forEach((prop) => {
+      
     if (prop === 'task') {
       taskName.textContent = task[prop]
     } else if (prop === 'desc') {
@@ -75,21 +76,40 @@ function renderTasks() {
     divTxt.append(prioDiv)
 
     doneBtn.textContent = 'Done'
-    divBtn.append(doneBtn)
+    divBtn.appendChild(doneBtn)
+  //  removeBtn.textContent = 'Remove'
+    // divBtn.append(removeBtn)
 
-
-
-
-
-
-divBtn.appendChild(createDelete(index));
-   
+    divBtn.append(createDelete(index))
    })
    taskInput.value = ''
    descInput.value = ''
     exitForm()
+
+
+    
 }
 
+function createDelete(index) {
+const removeBtn = document.createElement('button')
+removeBtn.textContent = 'Remove'
+  removeBtn.addEventListener('click', (e) => {
+    myTasks.splice(index, 1)
+
+renderTasks()
+console.log(myTasks)
+  })
+  return removeBtn
+}
+
+// function createDelete(index, arr) {
+//   const removeBtn = document.createElement('button')
+//   removeBtn.textContent = 'Remove'
+//   removeBtn.addEventListener('click', () => {
+//       arr.splice(index, 1)
+//   })
+ //  return removeBtn
+// } 
 
 btnExit.addEventListener('click', exitForm)
 addTask.addEventListener('click',addtask)
@@ -115,6 +135,8 @@ function Task(task, description, date, priority) {
 }
 
 function addtask() {
+  const contentDiv = document.querySelector('.taskdiv')
+  console.log(contentDiv)
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
     let datee = inputDate.value
@@ -126,18 +148,6 @@ taskInput.value = ''
 descInput.value = ''
 
    renderTasks()
-  myTasks = []
+
 }
 
-function createDelete(man) {
-  const removeBtn = document.createElement('button')
-
-  removeBtn.textContent = 'Remove'
-removeBtn.addEventListener('click', () => {
-  myTasks.splice(man, 1)
-  renderTasks()
- 
-
-})
-return removeBtn
-} 
