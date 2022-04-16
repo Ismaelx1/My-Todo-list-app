@@ -32,15 +32,16 @@ body {
 
 .navdiv {
     width: 18vw;
-    height: 82vh;
+    height: fit-content;
     background-color: #090a23;
     display: flex;
     flex-direction: column;
     border-top-right-radius: 10px;
 
+
 }
 
-.navdiv > div {
+.divnav {
     width: 18vw;
     height: 40px;
     background-color: #090a23;
@@ -53,13 +54,15 @@ body {
     font-style: italic;
     font-size: 20px;
     border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
 
 }
 
-.navdiv > div:hover {
+.divnav:hover {
     background-color: white;
     color: #090a23;
 }
+
 
 .contentdiv {
     width: 82vw;
@@ -102,11 +105,12 @@ flex-direction: column;
 .newone {
     height: fit-content;
     width: 250px;
-    background-color: lawngreen;
+    background: radial-gradient(circle, rgba(181,255,132,1) 0%, rgba(116,222,88,1) 48%, rgba(34,147,44,1) 100%);
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
+
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -262,4 +266,57 @@ text-align: center;
     height: 60px;
 }
 
+.btnthis {
+border: 2px solid #ffffff ;
+background-color: #090a23;
+color: #ffffff;
+cursor: pointer;
+font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
+font-style: italic;
+font-size: 20px;
+width: 200px;
+height: fit-content;
 
+
+}
+
+.btnthis:hover {
+   background-color: lightslategray;
+  
+}
+.BTNDIV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #090a23;
+    height: 100%;
+}
+.navcontainer {
+    display: flex;
+    flex-direction: column;
+}
+#projectName {
+    padding: 5px;
+    border-radius: 8px;
+    visibility: hidden;
+}
+.addProject {
+ 
+    color: #ffffff;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    visibility: hidden;
+    border: none;
+    cursor: pointer;
+    background-color: #090a23;
+    font-weight: bolder;
+    border: 2px solid #ffffff;
+}
+
+.addProject:hover {
+    background-color: lightslategray;
+}
