@@ -611,7 +611,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+localStorage.clear();
 
 const nav = document.querySelector('.navdiv')
 const showBtn = document.getElementById('showBtn')
@@ -634,21 +634,42 @@ let myTasks = [];
 
 
 
-renderTasks()
+// nav.addEventListener('click', () => {
+ // let e = event.target
+//   if (e.innerHTML === 'Accomplished Tasks' || e.innerHTML === 'Removed Tasks') {
+//    return false;
+//   } else if (e.innerHTML !== 'Accomplished Tasks' || e.innerHTML !== 'Removed Tasks') {
+//     let newM = e.textContent
+// 
+//     newM = new Array;
+//     newM = [
+//       {
+//         task: 'This Man',
+//         desc: 'Holy Hell',
+//         date: '23/54/2012',
+//         priority: 'Medium'
+ //      }
+//     ]
+// console.log(newM)
+//     container.innerHTML = ''
+//     renderTasks(newM)
+//   }
+// 
+// })
+
+renderTasks(myTasks)
 
 
 
-function renderTasks() {
+function renderTasks(rendArr) {
   container.innerHTML = ''
-   myTasks.forEach((task, index) => {
+   rendArr.forEach((task, index) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
     const divBtn = document.createElement('div')
     const taskName = document.createElement('div')
     const taskDescrip = document.createElement('div')
     const dueDate = document.createElement('div')
-    const doneBtn = document.createElement('button')
-  //  const removeBtn = document.createElement('button')
     const prioDiv = document.createElement('div')
     div.classList.add('s')
     divTxt.classList.add('txtTask')
@@ -658,12 +679,7 @@ function renderTasks() {
     dueDate.classList.add('duedate')
     prioDiv.classList.add('priotask')
 
-
-
-
-
     Object.keys(task).forEach((prop) => {
-      
     if (prop === 'task') {
       taskName.textContent = task[prop]
     } else if (prop === 'desc') {
@@ -674,15 +690,11 @@ function renderTasks() {
       prioDiv.textContent = `Priority:` + ' ' + task[prop]
     }
     })
-// taskName.textContent = task.task
-// taskDescrip.textContent = task.desc
-// dueDate.textContent = task.date
-// prioDiv.textContent = task.priority
+
     if (task.done) {
       div.classList.add('newone')
     } else if (!task.done) {
       div.classList.add('s')
-
     }
 
     container.append(div)
@@ -700,78 +712,63 @@ function renderTasks() {
     exitForm()    
 }
 
-
 function createDelete(index) {
 const removeBtn = document.createElement('button')
 removeBtn.textContent = 'Remove'
   removeBtn.addEventListener('click', () => {
     myTasks.splice(index, 1)
-    
-   
-renderTasks()
-
+renderTasks(myTasks)
   })
   return removeBtn
 }
+
 function doneEffect(task, had) {
   const doneBtn = document.createElement('button')
   doneBtn.textContent = 'Done'
   doneBtn.addEventListener('click', () => {
     task.done = true;
     had.classList.add('newone')
-
-    renderTasks()
-    
+    renderTasks(myTasks)
   })
   return doneBtn
 }
 
-
-// function createDelete(index, arr) {
-//   const removeBtn = document.createElement('button')
-//   removeBtn.textContent = 'Remove'
-//   removeBtn.addEventListener('click', () => {
-//       arr.splice(index, 1)
-//   })
- //  return removeBtn
-// } 
   addProject.addEventListener('click', () => {
     let newArr =  inputProject.value
     let div = document.createElement('div')
     div.classList.add('divnav')
     div.textContent = newArr
     nav.appendChild(div)
-    newArr = new Array;
-    console.log(newArr)
+    newArr = [];
+    
+
     hidePro()
     return newArr
-  })
+   
 
+  })
 
 function hidePro() {
   inputProject.style.visibility = 'hidden'
   addProject.style.visibility = 'hidden'
-
 }
 
 function showPro() {
   inputProject.style.visibility = 'visible'
   addProject.style.visibility = 'visible'
 }
+
+function exitForm() {
+  formShow.style.visibility = "hidden"
+}
+function showForm() {
+  formShow.style.visibility = "visible"
+}
+
 showProject.addEventListener('click', showPro)
 btnExit.addEventListener('click', exitForm)
 addTask.addEventListener('click',addtask)
 showBtn.addEventListener('click', showForm)
-
-function exitForm() {
-    formShow.style.visibility = "hidden"
-}
-function showForm() {
-    formShow.style.visibility = "visible"
-
-}
-
-
 
 
 function Task(task, description, date, priority) {
@@ -780,12 +777,9 @@ function Task(task, description, date, priority) {
     this.date = date,
     this.priority = priority,
     this.done = false
-    
 }
 
 function addtask() {
-
-
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
     let datee = inputDate.value
@@ -796,14 +790,13 @@ function addtask() {
 taskInput.value = ''
 descInput.value = ''
 
-   renderTasks()
-   console.log(myTasks)
+   renderTasks(myTasks)
 }
 
 const localLeads = JSON.parse(localStorage.getItem("myTasks"))
     if (localLeads) {
         myTasks = localLeads
-        renderTasks()
+      
     }
 
 
@@ -811,4 +804,4 @@ const localLeads = JSON.parse(localStorage.getItem("myTasks"))
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlee335fc1499a836069f42.js.map
+//# sourceMappingURL=bundlea0d04dfb331a4a505f9a.js.map

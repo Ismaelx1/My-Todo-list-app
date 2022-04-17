@@ -2,7 +2,7 @@
 
 import './styles/main.css'
 
-
+localStorage.clear();
 
 const nav = document.querySelector('.navdiv')
 const showBtn = document.getElementById('showBtn')
@@ -25,13 +25,36 @@ let myTasks = [];
 
 
 
-renderTasks()
+// nav.addEventListener('click', () => {
+ // let e = event.target
+//   if (e.innerHTML === 'Accomplished Tasks' || e.innerHTML === 'Removed Tasks') {
+//    return false;
+//   } else if (e.innerHTML !== 'Accomplished Tasks' || e.innerHTML !== 'Removed Tasks') {
+//     let newM = e.textContent
+// 
+//     newM = new Array;
+//     newM = [
+//       {
+//         task: 'This Man',
+//         desc: 'Holy Hell',
+//         date: '23/54/2012',
+//         priority: 'Medium'
+ //      }
+//     ]
+// console.log(newM)
+//     container.innerHTML = ''
+//     renderTasks(newM)
+//   }
+// 
+// })
+
+renderTasks(myTasks)
 
 
 
-function renderTasks() {
+function renderTasks(rendArr) {
   container.innerHTML = ''
-   myTasks.forEach((task, index) => {
+   rendArr.forEach((task, index) => {
     const div = document.createElement('div')
     const divTxt = document.createElement('div')
     const divBtn = document.createElement('div')
@@ -85,7 +108,7 @@ const removeBtn = document.createElement('button')
 removeBtn.textContent = 'Remove'
   removeBtn.addEventListener('click', () => {
     myTasks.splice(index, 1)
-renderTasks()
+renderTasks(myTasks)
   })
   return removeBtn
 }
@@ -96,7 +119,7 @@ function doneEffect(task, had) {
   doneBtn.addEventListener('click', () => {
     task.done = true;
     had.classList.add('newone')
-    renderTasks()
+    renderTasks(myTasks)
   })
   return doneBtn
 }
@@ -107,10 +130,13 @@ function doneEffect(task, had) {
     div.classList.add('divnav')
     div.textContent = newArr
     nav.appendChild(div)
-    newArr = new Array;
-    console.log(newArr)
+    newArr = [];
+    
+
     hidePro()
     return newArr
+   
+
   })
 
 function hidePro() {
@@ -155,12 +181,12 @@ function addtask() {
 taskInput.value = ''
 descInput.value = ''
 
-   renderTasks()
+   renderTasks(myTasks)
 }
 
 const localLeads = JSON.parse(localStorage.getItem("myTasks"))
     if (localLeads) {
         myTasks = localLeads
-        renderTasks()
+      
     }
 
