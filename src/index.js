@@ -117,8 +117,14 @@ function doneEffect(task, had) {
   const doneBtn = document.createElement('button')
   doneBtn.textContent = 'Done'
   doneBtn.addEventListener('click', () => {
-    task.done = true;
-    had.classList.add('newone')
+    if (task.done == false) {
+      task.done = true;
+      had.classList.add('newone')
+    } else if (task.done == true) {
+      task.done = false;
+      had.classList.add('s')
+    }
+   
     renderTasks(myTasks)
   })
   return doneBtn

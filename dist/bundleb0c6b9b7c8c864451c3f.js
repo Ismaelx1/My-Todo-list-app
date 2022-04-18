@@ -726,8 +726,14 @@ function doneEffect(task, had) {
   const doneBtn = document.createElement('button')
   doneBtn.textContent = 'Done'
   doneBtn.addEventListener('click', () => {
-    task.done = true;
-    had.classList.add('newone')
+    if (task.done == false) {
+      task.done = true;
+      had.classList.add('newone')
+    } else if (task.done == true) {
+      task.done = false;
+      had.classList.add('s')
+    }
+   
     renderTasks(myTasks)
   })
   return doneBtn
@@ -804,4 +810,4 @@ const localLeads = JSON.parse(localStorage.getItem("myTasks"))
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlea0d04dfb331a4a505f9a.js.map
+//# sourceMappingURL=bundleb0c6b9b7c8c864451c3f.js.map
