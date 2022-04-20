@@ -43,13 +43,13 @@ for (let i = 1; i <= myOptions.length; i++) {
 }
 
 
-addTask.addEventListener('click',() => {
-  addtask(myTasks)
- });
+
+
+
 
 nav.addEventListener('click', () => {
 let e = event.target
-renderTasks(myTasks)
+
   if (e.textContent === 'Home') {
     container.innerHTML = ''
     renderTasks(myTasks)
@@ -58,29 +58,34 @@ renderTasks(myTasks)
     })
   }
 
-  let playa = e.textContent
-  let roro = navDiv.indexOf(playa, 0)
+//  let playa = e.textContent
+  let roro = navDiv.indexOf(e.textContent, 0)
 
-  if (roro === 1) {
+
+  if (roro == 1) {
     container.innerHTML = ''
+    
     renderTasks(proj0)
     addTask.addEventListener('click',() => {
       addtask(proj0)
     })
-  } else if (roro === 2) {
+  } else if (roro == 2) {
     container.innerHTML = ''
+    
     renderTasks(proj1)
     addTask.addEventListener('click',() => {
       addtask(proj1)
     })
-  } else if (roro === 3) {
+  } else if (roro == 3) {
     container.innerHTML = ''
+    
     renderTasks(proj2)
     addTask.addEventListener('click',() => {
       addtask(proj2)
     })
-  } else if (roro === 4) {
+  } else if (roro == 4) {
     container.innerHTML = ''
+    
     renderTasks(proj3)
     addTask.addEventListener('click',() => {
       addtask(proj3)
@@ -88,28 +93,7 @@ renderTasks(myTasks)
   }
 
 })
-// nav.addEventListener('click', () => {
- // let e = event.target
-//   if (e.innerHTML === 'Accomplished Tasks' || e.innerHTML === 'Removed Tasks') {
-//    return false;
-//   } else if (e.innerHTML !== 'Accomplished Tasks' || e.innerHTML !== 'Removed Tasks') {
-//     let newM = e.textContent
-// 
-//     newM = new Array;
-//     newM = [
-//       {
-//         task: 'This Man',
-//         desc: 'Holy Hell',
-//         date: '23/54/2012',
-//         priority: 'Medium'
- //      }
-//     ]
-// console.log(newM)
-//     container.innerHTML = ''
-//     renderTasks(newM)
-//   }
-// 
-// })
+
 
 
 
@@ -163,8 +147,13 @@ function renderTasks(rendArr) {
    })
    taskInput.value = ''
    descInput.value = ''
-    exitForm()    
+
+exitForm()
 }
+
+addTask.addEventListener('click',() => {
+  addtask(myTasks)
+})
 
 function createDelete(index, arr) {
 const removeBtn = document.createElement('button')
@@ -205,17 +194,7 @@ function doneEffect(task, had, thisa) {
       nav.appendChild(div)
       myOptions.push(newArr)
       navDiv.push(newArr)
-      if (navDiv.length === 2) {
-        newArr = proj0
-        console.log(proj0)
-      } else if (navDiv.length === 3) {
-        newArr = proj1
-        console.log(proj1)
-      }  else if (navDiv.length === 4) {
-        newArr = proj2
-      } else if (navDiv.length === 5) {
-        newArr = proj3
-      } 
+  
 
       fillSelect()
       inputProject.value = ''
@@ -275,18 +254,46 @@ function addtask(thisArr) {
     let selectt = document.getElementById('project')
     
 
-   
-  if (selectt.value === 'home') {
-    myTasks.push(newTask)
-  } else if (selectt.value === '1') {
-    proj0.push(newTask)
-  } else if (selectt.value === '2') {
-    proj1.push(newTask)
-  } else if (selectt.value === '3') {
-    proj2.push(newTask)
-  } else if (selectt.value === '4') {
-    proj3.push(newTask)
-  }
+ 
+
+
+
+  // if (selectt.value == 'home') {
+  //   myTasks.push(newTask)
+  // } else if (selectt.value == '1') {
+   //  proj0.push(newTask)
+ //  } else if (selectt.value == '2') {
+ //    proj1.push(newTask)
+ //  } else if (selectt.value == '3') {
+  //   proj2.push(newTask)
+ //  } else if (selectt.value == '4') {
+ //    proj3.push(newTask)
+ //  } else {
+ //    myTasks.push(newTask)
+ //  }
+
+ //  switch(selectt.value) {
+ //    case 'home': myTasks.push(newTask)
+ //    break;
+// 
+ //    case '1': proj0.push(newTask) 
+   //  break;
+
+ //    case '2': proj1.push(newTask) 
+//     break;
+
+ //    case '3': proj2.push(newTask) 
+   // break;
+
+  //   case '4': proj3.push(newTask) 
+  //   break;
+
+ //    default: alert('Ho')
+
+
+ //  }
+
+
 
  //   localStorage.setItem("myTasks", JSON.stringify(myTasks))
 taskInput.value = ''
