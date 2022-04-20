@@ -17,7 +17,7 @@
 
                 <h1>Create  a New Task!</h1>
         <input type="text" id="taskName" placeholder="Task Name" required>
-        <input type="text" id="taskDesc" placeholder="Description (Optional)" required>
+        <input type="text" id="taskDesc" placeholder="Description (Optional)">
 
   
         <label for="appt">Choose a due date for the task:</label>
@@ -36,6 +36,14 @@
                 </select>
 
 
+
+                <label for="project">Choose a project:</label>
+
+                <select name="project" id="project">
+                  <option value="home" selected>Home</option>
+                  
+                </select>
+
           
 
 
@@ -49,8 +57,8 @@
     <div class="navcontainer">
         <div class="navdiv">
             <div class="divnav today">Home</div>
-            <div class="divnav finished">Accomplished Tasks</div>
-            <div class="divnav unfinished">Removed Tasks</div>
+    <!--    <div class="divnav finished">Accomplished Tasks</div>
+            <div class="divnav unfinished">Removed Tasks</div> -->    
         </div>
             <div class="BTNDIV">
                 <div class="navbtn"><button class="btnthis">Add Project</button></div>

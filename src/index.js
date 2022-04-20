@@ -22,9 +22,72 @@ const addProject = document.querySelector('.addProject')
 
 
 let myTasks = [];
+let navDiv = ['Home'];
+let proj0 =[];
+let proj1 = [];
+let proj2 = [];
+let proj3 = []
+
+let myOptions = [];
+
+function fillSelect() {
+
+  let select = document.getElementById('project');
+ 
+select.innerHTML = '<option value="home">Home</option>'
+for (let i = 1; i <= myOptions.length; i++) {
+    let option = '<option value="'+ i + '" >' + myOptions[i-1] + '</option>';
+    select.insertAdjacentHTML( 'beforeend', option );
+   
+}
+}
 
 
+addTask.addEventListener('click',() => {
+  addtask(myTasks)
+ });
 
+nav.addEventListener('click', () => {
+let e = event.target
+renderTasks(myTasks)
+  if (e.textContent === 'Home') {
+    container.innerHTML = ''
+    renderTasks(myTasks)
+    addTask.addEventListener('click',() => {
+      addtask(myTasks)
+    })
+  }
+
+  let playa = e.textContent
+  let roro = navDiv.indexOf(playa, 0)
+
+  if (roro === 1) {
+    container.innerHTML = ''
+    renderTasks(proj0)
+    addTask.addEventListener('click',() => {
+      addtask(proj0)
+    })
+  } else if (roro === 2) {
+    container.innerHTML = ''
+    renderTasks(proj1)
+    addTask.addEventListener('click',() => {
+      addtask(proj1)
+    })
+  } else if (roro === 3) {
+    container.innerHTML = ''
+    renderTasks(proj2)
+    addTask.addEventListener('click',() => {
+      addtask(proj2)
+    })
+  } else if (roro === 4) {
+    container.innerHTML = ''
+    renderTasks(proj3)
+    addTask.addEventListener('click',() => {
+      addtask(proj3)
+    })
+  }
+
+})
 // nav.addEventListener('click', () => {
  // let e = event.target
 //   if (e.innerHTML === 'Accomplished Tasks' || e.innerHTML === 'Removed Tasks') {
@@ -48,7 +111,7 @@ let myTasks = [];
 // 
 // })
 
-renderTasks(myTasks)
+
 
 
 
@@ -95,25 +158,25 @@ function renderTasks(rendArr) {
     divTxt.append(taskDescrip)
     divTxt.append(dueDate)
     divTxt.append(prioDiv)
-    divBtn.appendChild(doneEffect(task, div))
-    divBtn.append(createDelete(index))
+    divBtn.appendChild(doneEffect(task, div, rendArr))
+    divBtn.append(createDelete(index, rendArr))
    })
    taskInput.value = ''
    descInput.value = ''
     exitForm()    
 }
 
-function createDelete(index) {
+function createDelete(index, arr) {
 const removeBtn = document.createElement('button')
 removeBtn.textContent = 'Remove'
   removeBtn.addEventListener('click', () => {
-    myTasks.splice(index, 1)
-renderTasks(myTasks)
+    arr.splice(index, 1)
+renderTasks(arr)
   })
   return removeBtn
 }
 
-function doneEffect(task, had) {
+function doneEffect(task, had, thisa) {
   const doneBtn = document.createElement('button')
   doneBtn.textContent = 'Done'
   doneBtn.addEventListener('click', () => {
@@ -125,7 +188,7 @@ function doneEffect(task, had) {
       had.classList.add('s')
     }
    
-    renderTasks(myTasks)
+    renderTasks(thisa)
   })
   return doneBtn
 }
@@ -133,14 +196,35 @@ function doneEffect(task, had) {
   addProject.addEventListener('click', () => {
     let newArr =  inputProject.value
     let div = document.createElement('div')
-    div.classList.add('divnav')
-    div.textContent = newArr
-    nav.appendChild(div)
-    newArr = [];
+   
+    if (!inputProject.value) {
+   hidePro()
+    } else if (inputProject.value) {
+      div.classList.add('divnav')
+      div.textContent = newArr
+      nav.appendChild(div)
+      myOptions.push(newArr)
+      navDiv.push(newArr)
+      if (navDiv.length === 2) {
+        newArr = proj0
+        console.log(proj0)
+      } else if (navDiv.length === 3) {
+        newArr = proj1
+        console.log(proj1)
+      }  else if (navDiv.length === 4) {
+        newArr = proj2
+      } else if (navDiv.length === 5) {
+        newArr = proj3
+      } 
+
+      fillSelect()
+      inputProject.value = ''
+      hidePro()
+    }
     
 
-    hidePro()
-    return newArr
+ 
+    return div
    
 
   })
@@ -148,9 +232,15 @@ function doneEffect(task, had) {
 function hidePro() {
   inputProject.style.visibility = 'hidden'
   addProject.style.visibility = 'hidden'
+
+  let proBtn = document.querySelector('.btnthis')
+  proBtn.style.visibility = 'visible'
 }
 
 function showPro() {
+  let proBtn = document.querySelector('.btnthis')
+  proBtn.style.visibility = 'hidden'
+
   inputProject.style.visibility = 'visible'
   addProject.style.visibility = 'visible'
 }
@@ -164,7 +254,7 @@ function showForm() {
 
 showProject.addEventListener('click', showPro)
 btnExit.addEventListener('click', exitForm)
-addTask.addEventListener('click',addtask)
+
 showBtn.addEventListener('click', showForm)
 
 
@@ -176,23 +266,40 @@ function Task(task, description, date, priority) {
     this.done = false
 }
 
-function addtask() {
+function addtask(thisArr) {
     let taskpara = taskInput.value
     let descriptionpara = descInput.value
     let datee = inputDate.value
     let priority = prioInput.value
     let newTask = new Task(taskpara, descriptionpara, datee, priority)
+    let selectt = document.getElementById('project')
+    
+
+   
+  if (selectt.value === 'home') {
     myTasks.push(newTask)
-    localStorage.setItem("myTasks", JSON.stringify(myTasks))
+  } else if (selectt.value === '1') {
+    proj0.push(newTask)
+  } else if (selectt.value === '2') {
+    proj1.push(newTask)
+  } else if (selectt.value === '3') {
+    proj2.push(newTask)
+  } else if (selectt.value === '4') {
+    proj3.push(newTask)
+  }
+
+ //   localStorage.setItem("myTasks", JSON.stringify(myTasks))
 taskInput.value = ''
 descInput.value = ''
 
-   renderTasks(myTasks)
+
+container.innerHTML = ''
+   renderTasks(thisArr)
 }
 
-const localLeads = JSON.parse(localStorage.getItem("myTasks"))
-    if (localLeads) {
-        myTasks = localLeads
-      
-    }
-
+// const localLeads = JSON.parse(localStorage.getItem("myTasks"))
+//     if (localLeads) {
+//         myTasks = localLeads
+//       
+//     }
+// 
