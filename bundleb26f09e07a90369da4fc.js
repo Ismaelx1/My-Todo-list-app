@@ -529,6 +529,341 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/nav.js":
+/*!********************!*\
+  !*** ./src/nav.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "myTasks": () => (/* binding */ myTasks),
+/* harmony export */   "navFunc": () => (/* binding */ navFunc),
+/* harmony export */   "proj0": () => (/* binding */ proj0),
+/* harmony export */   "proj1": () => (/* binding */ proj1),
+/* harmony export */   "proj2": () => (/* binding */ proj2),
+/* harmony export */   "proj3": () => (/* binding */ proj3)
+/* harmony export */ });
+/* harmony import */ var _visibility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./visibility.js */ "./src/visibility.js");
+/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./render.js */ "./src/render.js");
+
+
+
+let myTasks = [];
+let proj0 = [];
+let proj1 = [];
+let proj2 = [];
+let proj3 = [];
+
+function navFunc() {
+    const nav = document.querySelector('.navdiv')
+     nav.addEventListener('click', () => {
+      let e = event.target
+       const container = document.getElementById('taskdiv')
+        let divIndex = _visibility_js__WEBPACK_IMPORTED_MODULE_0__.navDiv.indexOf(e.textContent, 0)
+      
+      if (e.textContent === 'Home') {
+        container.innerHTML = ''
+        ;(0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(myTasks)
+      }
+
+    else if (divIndex == 1) {
+        container.innerHTML = ''
+        
+        ;(0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(proj0)
+      } else if (divIndex == 2) {
+        container.innerHTML = ''
+        
+        ;(0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(proj1)
+      } else if (divIndex == 3) {
+        container.innerHTML = ''
+        
+        ;(0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(proj2)
+      } else if (divIndex == 4) {
+        container.innerHTML = ''
+    
+        ;(0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(proj3)
+      } else if (divIndex != 1 || divIndex != 2 || divIndex != 3 || divIndex != 4 || divIndex != 0) {
+        (0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(myTasks)
+      }
+    }) 
+    return
+}
+
+
+/***/ }),
+
+/***/ "./src/render.js":
+/*!***********************!*\
+  !*** ./src/render.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createDelete": () => (/* binding */ createDelete),
+/* harmony export */   "doneEffect": () => (/* binding */ doneEffect),
+/* harmony export */   "renderTasks": () => (/* binding */ renderTasks)
+/* harmony export */ });
+/* harmony import */ var _visibility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./visibility.js */ "./src/visibility.js");
+
+
+function renderTasks(rendArr) {
+  const container = document.getElementById('taskdiv')
+  const descInput = document.querySelector('#taskDesc')
+  const taskInput = document.querySelector('#taskName')
+
+  container.innerHTML = ''
+   rendArr.forEach((task, index) => {
+    const div = document.createElement('div')
+    const divTxt = document.createElement('div')
+    const divBtn = document.createElement('div')
+    const taskName = document.createElement('div')
+    const taskDescrip = document.createElement('div')
+    const dueDate = document.createElement('div')
+    const prioDiv = document.createElement('div')
+
+    div.classList.add('s')
+    divTxt.classList.add('txtTask')
+    divBtn.classList.add('btnTask')
+    taskName.classList.add('taskname')
+    taskDescrip.classList.add('taskdes')
+    dueDate.classList.add('duedate')
+    prioDiv.classList.add('priotask')
+
+    Object.keys(task).forEach((prop) => {
+    if (prop === 'task') {
+      taskName.textContent = task[prop]
+    } else if (prop === 'desc') {
+      taskDescrip.textContent = task[prop]
+    } else if (prop === 'date') {
+      dueDate.textContent = 'Before:' + ' ' + task[prop]
+    } else if (prop === 'priority') {
+      prioDiv.textContent = `Priority:` + ' ' + task[prop]
+    }
+    })
+
+    if (task.done) {
+      div.classList.add('newone')
+    } else if (!task.done) {
+      div.classList.add('s')
+    }
+
+    container.append(div)
+    div.append(divTxt)
+    div.append(divBtn)
+    divTxt.append(taskName)
+    divTxt.append(taskDescrip)
+    divTxt.append(dueDate)
+    divTxt.append(prioDiv)
+    divBtn.appendChild(doneEffect(task, div, rendArr))
+    divBtn.append(createDelete(index, rendArr))
+   })
+   taskInput.value = ''
+    descInput.value = ''
+      ;(0,_visibility_js__WEBPACK_IMPORTED_MODULE_0__.exitForm)()
+}
+
+function createDelete(index, arr) {
+  const removeBtn = document.createElement('button')
+  removeBtn.textContent = 'Remove'
+
+    removeBtn.addEventListener('click', () => {
+      arr.splice(index, 1)
+        renderTasks(arr)
+    })
+    return removeBtn
+  }
+  
+ function doneEffect(task, had, thisa) {
+    const doneBtn = document.createElement('button')
+    doneBtn.textContent = 'Done'
+    doneBtn.addEventListener('click', () => {
+
+      if (task.done == false) {
+        task.done = true;
+        had.classList.add('newone')
+      } else if (task.done == true) {
+        task.done = false;
+        had.classList.add('s')
+      }
+      renderTasks(thisa)
+    })
+    return doneBtn
+  }
+
+/***/ }),
+
+/***/ "./src/task.js":
+/*!*********************!*\
+  !*** ./src/task.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Task": () => (/* binding */ Task),
+/* harmony export */   "addtask": () => (/* binding */ addtask),
+/* harmony export */   "calSelect": () => (/* binding */ calSelect)
+/* harmony export */ });
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./render.js */ "./src/render.js");
+
+
+
+function Task(task, description, date, priority) {
+  this.task = task,
+  this.desc = description,
+  this.date = date,
+  this.priority = priority,
+  this.done = false
+}
+
+function calSelect(newTask) {
+  let selectt = document.getElementById('project')
+
+  if (selectt.value === 'home') {
+  _nav_js__WEBPACK_IMPORTED_MODULE_0__.myTasks.push(newTask)
+    return _nav_js__WEBPACK_IMPORTED_MODULE_0__.myTasks
+
+  } else if (selectt.value === '1') {
+    _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj0.push(newTask)
+     return _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj0
+
+  } else if (selectt.value === '2') {
+    _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj1.push(newTask)
+     return _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj1
+   
+  } else if (selectt.value === '3') {
+    _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj2.push(newTask)
+     return _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj2
+ 
+  } else if (selectt.value === '4') {
+    _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj3.push(newTask)
+     return _nav_js__WEBPACK_IMPORTED_MODULE_0__.proj3
+
+  } else {
+   _nav_js__WEBPACK_IMPORTED_MODULE_0__.myTasks.push(newTask)
+   return _nav_js__WEBPACK_IMPORTED_MODULE_0__.myTasks
+  }
+}
+
+
+function addtask(thisArr) {
+  const taskInput = document.querySelector('#taskName')
+  const descInput = document.querySelector('#taskDesc')
+  const container = document.getElementById('taskdiv')
+  const inputDate = document.querySelector('#appt')
+  const prioInput = document.getElementById('priority')
+
+    let taskpara = taskInput.value
+    let descriptionpara = descInput.value
+    let datee = inputDate.value
+    let priority = prioInput.value
+    let newTask = new Task(taskpara, descriptionpara, datee, priority)
+
+  ;(0,_render_js__WEBPACK_IMPORTED_MODULE_1__.renderTasks)(thisArr)
+    calSelect(newTask)
+      taskInput.value = ''
+        descInput.value = ''
+          container.innerHTML = ''
+}
+
+
+
+
+/***/ }),
+
+/***/ "./src/visibility.js":
+/*!***************************!*\
+  !*** ./src/visibility.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addProjectFunc": () => (/* binding */ addProjectFunc),
+/* harmony export */   "exitForm": () => (/* binding */ exitForm),
+/* harmony export */   "fillSelect": () => (/* binding */ fillSelect),
+/* harmony export */   "hidePro": () => (/* binding */ hidePro),
+/* harmony export */   "myOptions": () => (/* binding */ myOptions),
+/* harmony export */   "navDiv": () => (/* binding */ navDiv),
+/* harmony export */   "showForm": () => (/* binding */ showForm),
+/* harmony export */   "showPro": () => (/* binding */ showPro)
+/* harmony export */ });
+let myOptions = [];
+let navDiv = ['Home'];
+
+function fillSelect() {
+    let select = document.getElementById('project');
+  select.innerHTML = '<option value="home">Home</option>'
+  for (let i = 1; i <= myOptions.length; i++) {
+      let option = '<option value="'+ i + '" >' + myOptions[i-1] + '</option>';
+      select.insertAdjacentHTML( 'beforeend', option );
+  }
+}
+
+function exitForm() {
+    const formShow = document.querySelector('.form')
+    formShow.style.visibility = "hidden"
+  }
+
+
+ function hidePro() {
+  const addProject = document.querySelector('.addProject')
+    const inputProject = document.querySelector('#projectName')
+    let proBtn = document.querySelector('.btnthis')
+
+    inputProject.style.visibility = 'hidden'
+    addProject.style.visibility = 'hidden'
+    proBtn.style.visibility = 'visible'
+  }
+
+  function showPro() {
+    const addProject = document.querySelector('.addProject')
+    const inputProject = document.querySelector('#projectName')
+    let proBtn = document.querySelector('.btnthis')
+
+    proBtn.style.visibility = 'hidden'
+    inputProject.style.visibility = 'visible'
+    addProject.style.visibility = 'visible'
+  }
+
+ function showForm() {
+    const formShow = document.querySelector('.form')
+    formShow.style.visibility = "visible"
+  }
+  
+function addProjectFunc() {
+  const nav = document.querySelector('.navdiv')
+  const addProject = document.querySelector('.addProject')
+
+addProject.addEventListener('click', () => {
+  const inputProject = document.querySelector('#projectName')
+  let newArr =  inputProject.value
+  let div = document.createElement('div')
+ 
+  if (!inputProject.value) {
+ hidePro()
+  } else if (inputProject.value) {
+    div.classList.add('divnav')
+    div.textContent = newArr
+    nav.appendChild(div)
+    myOptions.push(newArr)
+    navDiv.push(newArr)
+    inputProject.value = ''
+    fillSelect()
+    hidePro()
+  }
+  return div
+})
+return
+}
+
+
+
 /***/ })
 
 /******/ 	});
@@ -607,326 +942,40 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _visibility_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./visibility.js */ "./src/visibility.js");
+/* harmony import */ var _task_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./task.js */ "./src/task.js");
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./render.js */ "./src/render.js");
 
 
 
 
-// localStorage.clear();
 
-const nav = document.querySelector('.navdiv')
-const showBtn = document.getElementById('showBtn')
-const btnExit = document.querySelector('#exitform')
-const formShow = document.querySelector('.form')
+
+
+(0,_visibility_js__WEBPACK_IMPORTED_MODULE_1__.addProjectFunc)()
+;(0,_nav_js__WEBPACK_IMPORTED_MODULE_3__.navFunc)()
+
 const addTask = document.querySelector('#addTask')
-const taskInput = document.querySelector('#taskName')
-const descInput = document.querySelector('#taskDesc')
-const container = document.getElementById('taskdiv')
-const inputDate = document.querySelector('#appt')
-const prioInput = document.getElementById('priority')
-const showProject = document.querySelector('.btnthis')
-const inputProject = document.querySelector('#projectName')
-const addProject = document.querySelector('.addProject')
-
-
-
-
-let myTasks = [];
-let navDiv = ['Home'];
-let proj0 =[];
-let proj1 = [];
-let proj2 = [];
-let proj3 = []
-
-let myOptions = [];
-
-function fillSelect() {
-
-  let select = document.getElementById('project');
- 
-select.innerHTML = '<option value="home">Home</option>'
-for (let i = 1; i <= myOptions.length; i++) {
-    let option = '<option value="'+ i + '" >' + myOptions[i-1] + '</option>';
-    select.insertAdjacentHTML( 'beforeend', option );
-   
-}
-}
-
-
-
-
-
-nav.addEventListener('click', () => {
-let e = event.target
-
-  if (e.textContent === 'Home') {
-    container.innerHTML = ''
-    renderTasks(myTasks)
-
-  }
-
-
-  let roro = navDiv.indexOf(e.textContent, 0)
-
-
-  if (roro == 1) {
-    container.innerHTML = ''
-    
-    renderTasks(proj0)
- 
-  } else if (roro == 2) {
-    container.innerHTML = ''
-    
-    renderTasks(proj1)
-
-  } else if (roro == 3) {
-    container.innerHTML = ''
-    
-    renderTasks(proj2)
-
-  } else if (roro == 4) {
-    container.innerHTML = ''
-    
-    renderTasks(proj3)
-
-  } else if (roro != 1 || roro != 2 || roro != 3 || roro != 4 || roro != 0) {
-    
-    renderTasks(myTasks)
-  }
-console.log(roro)
-}) 
-
-
-
-addTask.addEventListener('click', () => {
- 
-})
-
-
-
-function calSelect(newTask) {
-
-  let selectt = document.getElementById('project')
-    
-
-
-  if (selectt.value === 'home') {
-  myTasks.push(newTask)
-
-  localStorage.setItem("mytasks", JSON.stringify(myTasks))
-  return myTasks
-  } else if (selectt.value === '1') {
-   
-
-    proj0.push(newTask)
-    localStorage.setItem("mytasks0", JSON.stringify(proj0))
-    return proj0
-  } else if (selectt.value === '2') {
-
-    proj1.push(newTask)
-    return proj1
-    localStorage.setItem("mytasks1", JSON.stringify(proj1))
-  } else if (selectt.value === '3') {
- 
-    proj2.push(newTask)
-    localStorage.setItem("mytasks2", JSON.stringify(proj2))
-    return proj2
- 
-  } else if (selectt.value === '4') {
-
-
-    proj3.push(newTask)
-    localStorage.setItem("mytasks3", JSON.stringify(proj3))
-    return proj3
-  } else {
-
-
-   myTasks.push(newTask)
-   return myTasks
-  }
-
-
-
-}
-
-
-function renderTasks(rendArr) {
-  container.innerHTML = ''
-   rendArr.forEach((task, index) => {
-    const div = document.createElement('div')
-    const divTxt = document.createElement('div')
-    const divBtn = document.createElement('div')
-    const taskName = document.createElement('div')
-    const taskDescrip = document.createElement('div')
-    const dueDate = document.createElement('div')
-    const prioDiv = document.createElement('div')
-    div.classList.add('s')
-    divTxt.classList.add('txtTask')
-    divBtn.classList.add('btnTask')
-    taskName.classList.add('taskname')
-    taskDescrip.classList.add('taskdes')
-    dueDate.classList.add('duedate')
-    prioDiv.classList.add('priotask')
-
-    Object.keys(task).forEach((prop) => {
-    if (prop === 'task') {
-      taskName.textContent = task[prop]
-    } else if (prop === 'desc') {
-      taskDescrip.textContent = task[prop]
-    } else if (prop === 'date') {
-      dueDate.textContent = 'Before:' + ' ' + task[prop]
-    } else if (prop === 'priority') {
-      prioDiv.textContent = `Priority:` + ' ' + task[prop]
-    }
-    })
-
-    if (task.done) {
-      div.classList.add('newone')
-    } else if (!task.done) {
-      div.classList.add('s')
-    }
-
-    container.append(div)
-    div.append(divTxt)
-    div.append(divBtn)
-    divTxt.append(taskName)
-    divTxt.append(taskDescrip)
-    divTxt.append(dueDate)
-    divTxt.append(prioDiv)
-    divBtn.appendChild(doneEffect(task, div, rendArr))
-    divBtn.append(createDelete(index, rendArr))
-   })
-   taskInput.value = ''
-   descInput.value = ''
-
-exitForm()
-}
-
 addTask.addEventListener('click',() => {
-  addtask(myTasks)
+  ;(0,_task_js__WEBPACK_IMPORTED_MODULE_2__.addtask)(_nav_js__WEBPACK_IMPORTED_MODULE_3__.myTasks)
 })
 
-function createDelete(index, arr) {
-const removeBtn = document.createElement('button')
-removeBtn.textContent = 'Remove'
-  removeBtn.addEventListener('click', () => {
-    arr.splice(index, 1)
-renderTasks(arr)
-  })
-  return removeBtn
-}
+  const showProject = document.querySelector('.btnthis')
+showProject.addEventListener('click', _visibility_js__WEBPACK_IMPORTED_MODULE_1__.showPro)
 
-function doneEffect(task, had, thisa) {
-  const doneBtn = document.createElement('button')
-  doneBtn.textContent = 'Done'
-  doneBtn.addEventListener('click', () => {
-    if (task.done == false) {
-      task.done = true;
-      had.classList.add('newone')
-    } else if (task.done == true) {
-      task.done = false;
-      had.classList.add('s')
-    }
-   
-    renderTasks(thisa)
-  })
-  return doneBtn
-}
+const btnExit = document.querySelector('#exitform')
+btnExit.addEventListener('click', _visibility_js__WEBPACK_IMPORTED_MODULE_1__.exitForm)
 
-  addProject.addEventListener('click', () => {
-    let newArr =  inputProject.value
-    let div = document.createElement('div')
-   
-    if (!inputProject.value) {
-   hidePro()
-    } else if (inputProject.value) {
-      div.classList.add('divnav')
-      div.textContent = newArr
-      nav.appendChild(div)
-      myOptions.push(newArr)
-      navDiv.push(newArr)
-  
-
-      fillSelect()
-      inputProject.value = ''
-      hidePro()
-    }
-    
-
- 
-    return div
-   
-
-  })
-
-function hidePro() {
-  inputProject.style.visibility = 'hidden'
-  addProject.style.visibility = 'hidden'
-
-  let proBtn = document.querySelector('.btnthis')
-  proBtn.style.visibility = 'visible'
-}
-
-function showPro() {
-  let proBtn = document.querySelector('.btnthis')
-  proBtn.style.visibility = 'hidden'
-
-  inputProject.style.visibility = 'visible'
-  addProject.style.visibility = 'visible'
-}
-
-function exitForm() {
-  formShow.style.visibility = "hidden"
-}
-function showForm() {
-  formShow.style.visibility = "visible"
-}
-
-showProject.addEventListener('click', showPro)
-btnExit.addEventListener('click', exitForm)
-
-showBtn.addEventListener('click', showForm)
-
-
-function Task(task, description, date, priority) {
-    this.task = task,
-    this.desc = description,
-    this.date = date,
-    this.priority = priority,
-    this.done = false
-}
-
-function addtask(thisArr) {
-    let taskpara = taskInput.value
-    let descriptionpara = descInput.value
-    let datee = inputDate.value
-    let priority = prioInput.value
-    let newTask = new Task(taskpara, descriptionpara, datee, priority)
-    calSelect(newTask)
-    
-    
- 
- 
+const showBtn = document.getElementById('showBtn')
+showBtn.addEventListener('click', _visibility_js__WEBPACK_IMPORTED_MODULE_1__.showForm)
 
 
 
 
-taskInput.value = ''
-descInput.value = ''
 
-
-container.innerHTML = ''
-   renderTasks(thisArr)
-}
-
-
- const localLeads = JSON.parse(localStorage.getItem("myTasks"))
-     if (localLeads) {
-         myTasks = localLeads
-       
-     }
- 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle463bbf03cd36fe0f1205.js.map
+//# sourceMappingURL=bundleb26f09e07a90369da4fc.js.map
