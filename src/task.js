@@ -21,7 +21,7 @@ export function addtask(thisArr) {
      renderTasks(thisArr)
   }
 
-  function calSelect(newTask) {
+ export function calSelect(newTask) {
     let selectt = document.getElementById('project')
     let myTasks = [];
     let proj0 =[];
