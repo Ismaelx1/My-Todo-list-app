@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: fit-content;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n\n}\n\n.divnav {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n    margin-bottom: 10px;\n\n}\n\n.divnav:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.divnav:focus {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: flex-start;\n    row-gap: 10px;\n    column-gap: 10px;\n   \n  \n}\n\n\n.s {\n    height: fit-content;\n    width: 250px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n\n.newone {\n    height: fit-content;\n    width: 250px;\n    background: radial-gradient(circle, rgba(181,255,132,1) 0%, rgba(116,222,88,1) 48%, rgba(34,147,44,1) 100%);\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n.txtTask {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 10px 10px 0px 10px;\n\n}\n.taskname {\n\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n    font-weight: bolder;\n\n}\n\n.taskdes {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n\n\n}\n\n.duedate {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n}\n\n.priotask {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n    text-decoration:underline;\n    margin-bottom: 5px;\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 125px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 400px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 20px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > select {\n    width: 300px;\n    position: relative;\n    margin-left: 100px;\n}\n.form > h1{\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n\n.form > label {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n.btnthis {\nborder: 2px solid #ffffff ;\nbackground-color: #090a23;\ncolor: #ffffff;\ncursor: pointer;\nfont-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\nfont-style: italic;\nfont-size: 20px;\nwidth: 200px;\nheight: fit-content;\n\n\n}\n\n.btnthis:hover {\n   background-color: lightslategray;\n  \n}\n.BTNDIV {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 20px;\n    background-color: #090a23;\n    height: 100%;\n}\n.navcontainer {\n    display: flex;\n    flex-direction: column;\n}\n#projectName {\n    padding: 5px;\n    border-radius: 8px;\n    visibility: hidden;\n}\n.addProject {\n \n    color: #ffffff;\n    font-size: 20px;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    visibility: hidden;\n    border: none;\n    cursor: pointer;\n    background-color: #090a23;\n    font-weight: bolder;\n    border: 2px solid #ffffff;\n}\n\n.addProject:hover {\n    background-color: lightslategray;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');\n\nbody {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: fit-content;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n\n}\n\n.divnav {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n    margin-bottom: 10px;\n\n}\n\n.divnav:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.divnav:focus {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: flex-start;\n    row-gap: 10px;\n    column-gap: 10px;\n   \n  \n}\n\n\n.s {\n    height: fit-content;\n    width: 250px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n\n.newone {\n    height: fit-content;\n    width: 250px;\n    background: radial-gradient(circle, rgba(181,255,132,1) 0%, rgba(116,222,88,1) 48%, rgba(34,147,44,1) 100%);\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n.txtTask {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 10px 10px 0px 10px;\n\n}\n.taskname {\n\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n    font-weight: bolder;\n\n}\n\n.taskdes {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n\n\n}\n\n.duedate {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n}\n\n.priotask {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n    text-decoration:underline;\n    margin-bottom: 5px;\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 125px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 400px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 20px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > select {\n    width: 300px;\n    position: relative;\n    margin-left: 100px;\n}\n.form > h1{\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n\n.form > label {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n.btnthis {\nborder: 2px solid #ffffff ;\nbackground-color: #090a23;\ncolor: #ffffff;\ncursor: pointer;\nfont-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\nfont-style: italic;\nfont-size: 20px;\nwidth: 200px;\nheight: fit-content;\n\n\n}\n\n.btnthis:hover {\n   background-color: lightslategray;\n  \n}\n.BTNDIV {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 20px;\n    background-color: #090a23;\n    height: 100%;\n}\n.navcontainer {\n    display: flex;\n    flex-direction: column;\n}\n#projectName {\n    padding: 5px;\n    border-radius: 8px;\n    visibility: hidden;\n}\n.addProject {\n \n    color: #ffffff;\n    font-size: 20px;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    visibility: hidden;\n    border: none;\n    cursor: pointer;\n    background-color: #090a23;\n    font-weight: bolder;\n    border: 2px solid #ffffff;\n}\n\n.addProject:hover {\n    background-color: lightslategray;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 82vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n\n}\n\n.divnav {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n    margin-bottom: 10px;\n\n}\n\n.divnav:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.divnav:focus {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: flex-start;\n    row-gap: 10px;\n    column-gap: 10px;\n   \n  \n}\n\n\n.s {\n    height: fit-content;\n    width: 250px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n\n.newone {\n    height: fit-content;\n    width: 250px;\n    background: radial-gradient(circle, rgba(181,255,132,1) 0%, rgba(116,222,88,1) 48%, rgba(34,147,44,1) 100%);\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n.txtTask {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 10px 10px 0px 10px;\n\n}\n.taskname {\n\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n    font-weight: bolder;\n\n}\n\n.taskdes {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n\n\n}\n\n.duedate {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n}\n\n.priotask {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n    text-decoration:underline;\n    margin-bottom: 5px;\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 125px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 400px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 20px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > select {\n    width: 300px;\n    position: relative;\n    margin-left: 100px;\n}\n.form > h1{\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n\n.form > label {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n.btnthis {\nborder: 2px solid #ffffff ;\nbackground-color: #090a23;\ncolor: #ffffff;\ncursor: pointer;\nfont-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\nfont-style: italic;\nfont-size: 20px;\nwidth: 200px;\nheight: fit-content;\n\n\n}\n\n.btnthis:hover {\n   background-color: lightslategray;\n  \n}\n.BTNDIV {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 20px;\n    background-color: #090a23;\n    height: 100%;\n}\n.navcontainer {\n    display: flex;\n    flex-direction: column;\n}\n#projectName {\n    padding: 5px;\n    border-radius: 8px;\n    visibility: hidden;\n}\n.addProject {\n \n    color: #ffffff;\n    font-size: 20px;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    visibility: hidden;\n    border: none;\n    cursor: pointer;\n    background-color: #090a23;\n    font-weight: bolder;\n    border: 2px solid #ffffff;\n}\n\n.addProject:hover {\n    background-color: lightslategray;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');\n\nbody {\n    padding: 0;\n    margin: 0;\n}\n\n.header {\n    width: 100vw;\n    height: 20vh;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.header > h1 {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 40px;\n}\n\n\n.container {\n    width: 100vw;\n    height: 80vh;\n\n    display: flex;\n  \n}\n\n.navdiv {\n    width: 18vw;\n    height: 82vh;\n    background-color: #090a23;\n    display: flex;\n    flex-direction: column;\n    border-top-right-radius: 10px;\n\n\n}\n\n.divnav {\n    width: 18vw;\n    height: 40px;\n    background-color: #090a23;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer;\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    border-bottom-right-radius: 10px;\n    margin-bottom: 10px;\n\n}\n\n.divnav:hover {\n    background-color: white;\n    color: #090a23;\n}\n\n.divnav:focus {\n    background-color: white;\n    color: #090a23;\n}\n\n.contentdiv {\n    width: 82vw;\n    height: 80vh;\n    display: flex;\nflex-direction: column;\n\n\n \n}\n.taskdiv {\n    width: 82vw;\n    height: fit-content;\n\n    display: flex;\n    flex-wrap: wrap;\n\n    justify-content: flex-start;\n    row-gap: 10px;\n    column-gap: 10px;\n   \n  \n}\n\n\n.s {\n    height: fit-content;\n    width: 250px;\n    background-color: #090a23;\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n\n.newone {\n    height: fit-content;\n    width: 250px;\n    background: radial-gradient(circle, rgba(181,255,132,1) 0%, rgba(116,222,88,1) 48%, rgba(34,147,44,1) 100%);\n    border-radius: 10px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    display: flex;\n\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    margin-left: 20px;\n}\n.txtTask {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 10px 10px 0px 10px;\n\n}\n.taskname {\n\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n    font-weight: bolder;\n\n}\n\n.taskdes {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n\n\n}\n\n.duedate {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n}\n\n.priotask {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 20px;\n    font-weight: bold;\n    margin-top: 5px;\n    text-decoration:underline;\n    margin-bottom: 5px;\n}\n.btnTask {\n  display: flex;\n    \n}\nbutton {\n    height: 30px;\n    width: 125px;\n}\n.btn {\ndisplay: flex;\nwidth: 60px;\nheight: 60px;\nmargin: 0 auto;\n\n\n\n\n}\n#showBtn {\n   \n \n    cursor: pointer;\n \n}\n\n\n\n\n.form {\n    display: flex;\n    flex-direction: column;\n    z-index: 100;\n    gap: 5px;\n    align-content: center;\n    justify-content: center;\n    height: 400px;\n width: 500px;\n visibility: hidden;\nposition: absolute;\nmargin-top: 20px;\nmargin-left: 550px;\nbackground-color: #090a23;\nbackground-size: cover;\nborder-radius: 10px;\ntext-align: center;\n}\n.form > select {\n    width: 300px;\n    position: relative;\n    margin-left: 100px;\n}\n.form > h1{\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 25px;\n}\n.form > button {\n    width: 100px;\n    height: 30px;\n    border-radius: 8px;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-self: center;\n    display: inline-block;\n    font-size: 15px;\n    font-weight: 900;\n   \n\n    \n\n}\n\n.form > label {\n    color: #ffffff;\n    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\n    font-style: italic;\n    font-size: 15px;\n}\n.form > button:hover {\n    background-color: lightslategray;\n}\n.form > input {\n    width: 200px;\n    height: 30px;\n    border: none;\n    cursor: pointer;\n    border-radius: 8px;\n    background-color: white;\n    display: flex;\n    align-self: center;\n    padding-left: 5px;\n \n   \n}\n#taskName {\n    width: 400px;\n}\n#taskDesc {\n    width: 350px;\n    height: 60px;\n}\n\n.btnthis {\nborder: 2px solid #ffffff ;\nbackground-color: #090a23;\ncolor: #ffffff;\ncursor: pointer;\nfont-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;\nfont-style: italic;\nfont-size: 20px;\nwidth: 200px;\nheight: fit-content;\n\n\n}\n\n.btnthis:hover {\n   background-color: lightslategray;\n  \n}\n.BTNDIV {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 20px;\n    background-color: #090a23;\n    height: 100%;\n}\n.navcontainer {\n    display: flex;\n    flex-direction: column;\n}\n#projectName {\n    padding: 5px;\n    border-radius: 8px;\n    visibility: hidden;\n}\n.addProject {\n \n    color: #ffffff;\n    font-size: 20px;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    visibility: hidden;\n    border: none;\n    cursor: pointer;\n    background-color: #090a23;\n    font-weight: bolder;\n    border: 2px solid #ffffff;\n}\n\n.addProject:hover {\n    background-color: lightslategray;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -655,16 +655,13 @@ for (let i = 1; i <= myOptions.length; i++) {
 
 
 
-
 nav.addEventListener('click', () => {
 let e = event.target
 
   if (e.textContent === 'Home') {
     container.innerHTML = ''
     renderTasks(myTasks)
-    addTask.addEventListener('click',() => {
-      addtask(myTasks)
-    })
+
   }
 
 //  let playa = e.textContent
@@ -675,37 +672,74 @@ let e = event.target
     container.innerHTML = ''
     
     renderTasks(proj0)
-    addTask.addEventListener('click',() => {
-      addtask(proj0)
-    })
+ 
   } else if (roro == 2) {
     container.innerHTML = ''
     
     renderTasks(proj1)
-    addTask.addEventListener('click',() => {
-      addtask(proj1)
-    })
+
   } else if (roro == 3) {
     container.innerHTML = ''
     
     renderTasks(proj2)
-    addTask.addEventListener('click',() => {
-      addtask(proj2)
-    })
+
   } else if (roro == 4) {
     container.innerHTML = ''
     
     renderTasks(proj3)
-    addTask.addEventListener('click',() => {
-      addtask(proj3)
-    })
-  }
 
+  } else if (roro != 1 || roro != 2 || roro != 3 || roro != 4 || roro != 0) {
+    
+    renderTasks(myTasks)
+  }
+console.log(roro)
+}) 
+
+
+
+addTask.addEventListener('click', () => {
+ 
 })
 
 
 
+function calSelect(newTask) {
 
+  let selectt = document.getElementById('project')
+    
+
+
+  if (selectt.value === 'home') {
+  myTasks.push(newTask)
+  return myTasks
+  } else if (selectt.value === '1') {
+   
+
+    proj0.push(newTask)
+    return proj0
+  } else if (selectt.value === '2') {
+
+    proj1.push(newTask)
+    return proj1
+  } else if (selectt.value === '3') {
+ 
+    proj2.push(newTask)
+    return proj2
+  } else if (selectt.value === '4') {
+
+
+    proj3.push(newTask)
+    return proj3
+  } else {
+
+
+   myTasks.push(newTask)
+   return myTasks
+  }
+
+
+
+}
 
 
 function renderTasks(rendArr) {
@@ -860,47 +894,12 @@ function addtask(thisArr) {
     let datee = inputDate.value
     let priority = prioInput.value
     let newTask = new Task(taskpara, descriptionpara, datee, priority)
-    let selectt = document.getElementById('project')
+    calSelect(newTask)
     
-
+    
+ 
  
 
-
-
-  // if (selectt.value == 'home') {
-  //   myTasks.push(newTask)
-  // } else if (selectt.value == '1') {
-   //  proj0.push(newTask)
- //  } else if (selectt.value == '2') {
- //    proj1.push(newTask)
- //  } else if (selectt.value == '3') {
-  //   proj2.push(newTask)
- //  } else if (selectt.value == '4') {
- //    proj3.push(newTask)
- //  } else {
- //    myTasks.push(newTask)
- //  }
-
- //  switch(selectt.value) {
- //    case 'home': myTasks.push(newTask)
- //    break;
-// 
- //    case '1': proj0.push(newTask) 
-   //  break;
-
- //    case '2': proj1.push(newTask) 
-//     break;
-
- //    case '3': proj2.push(newTask) 
-   // break;
-
-  //   case '4': proj3.push(newTask) 
-  //   break;
-
- //    default: alert('Ho')
-
-
- //  }
 
 
 
@@ -913,15 +912,15 @@ container.innerHTML = ''
    renderTasks(thisArr)
 }
 
+
 // const localLeads = JSON.parse(localStorage.getItem("myTasks"))
 //     if (localLeads) {
 //         myTasks = localLeads
 //       
 //     }
 // 
-
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle72cbfd95ba95cdd5a228.js.map
+//# sourceMappingURL=bundle859050d12be2bc3cc134.js.map
