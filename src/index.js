@@ -1,221 +1,48 @@
-
-
 import './styles/main.css'
-
-localStorage.clear();
-
-const nav = document.querySelector('.navdiv')
-const showBtn = document.getElementById('showBtn')
-const btnExit = document.querySelector('#exitform')
-const formShow = document.querySelector('.form')
-const addTask = document.querySelector('#addTask')
-const taskInput = document.querySelector('#taskName')
-const descInput = document.querySelector('#taskDesc')
-const container = document.getElementById('taskdiv')
-const inputDate = document.querySelector('#appt')
-const prioInput = document.getElementById('priority')
-const showProject = document.querySelector('.btnthis')
-const inputProject = document.querySelector('#projectName')
-const addProject = document.querySelector('.addProject')
+import { renderTasks } from './render.js';
+import { exitForm, hidePro, showForm, showPro, fillSelect } from './visibility.js';
+import { addtask, Task } from './task.js'
 
 
-
-
-let myTasks = [];
 let navDiv = ['Home'];
-let proj0 =[];
-let proj1 = [];
-let proj2 = [];
-let proj3 = []
-
-let myOptions = [];
-
-function fillSelect() {
-
-  let select = document.getElementById('project');
- 
-select.innerHTML = '<option value="home">Home</option>'
-for (let i = 1; i <= myOptions.length; i++) {
-    let option = '<option value="'+ i + '" >' + myOptions[i-1] + '</option>';
-    select.insertAdjacentHTML( 'beforeend', option );
-   
-}
-}
-
-
-
-
-
+const nav = document.querySelector('.navdiv')
 nav.addEventListener('click', () => {
 let e = event.target
+const container = document.getElementById('taskdiv')
+const navIndex = navDiv.indexOf(e.textContent, 0)
 
   if (e.textContent === 'Home') {
     container.innerHTML = ''
+
     renderTasks(myTasks)
-
-  }
-
-//  let playa = e.textContent
-  let roro = navDiv.indexOf(e.textContent, 0)
-
-
-  if (roro == 1) {
+  } else if (navIndex == 1) {
     container.innerHTML = ''
-    
+
     renderTasks(proj0)
- 
-  } else if (roro == 2) {
+  } else if (navIndex == 2) {
     container.innerHTML = ''
     
     renderTasks(proj1)
-
-  } else if (roro == 3) {
+  } else if (navIndex == 3) {
     container.innerHTML = ''
     
     renderTasks(proj2)
-
-  } else if (roro == 4) {
+  } else if (navIndex == 4) {
     container.innerHTML = ''
     
     renderTasks(proj3)
-
-  } else if (roro != 1 || roro != 2 || roro != 3 || roro != 4 || roro != 0) {
+  } else if (navIndex != 1 || roro != 2 || roro != 3 || roro != 4 || roro != 0) {
     
     renderTasks(myTasks)
   }
-console.log(roro)
 }) 
 
-
-
-addTask.addEventListener('click', () => {
- 
-})
-
-
-
-function calSelect(newTask) {
-
-  let selectt = document.getElementById('project')
-    
-
-
-  if (selectt.value === 'home') {
-  myTasks.push(newTask)
-  return myTasks
-  } else if (selectt.value === '1') {
-   
-
-    proj0.push(newTask)
-    return proj0
-  } else if (selectt.value === '2') {
-
-    proj1.push(newTask)
-    return proj1
-  } else if (selectt.value === '3') {
- 
-    proj2.push(newTask)
-    return proj2
-  } else if (selectt.value === '4') {
-
-
-    proj3.push(newTask)
-    return proj3
-  } else {
-
-
-   myTasks.push(newTask)
-   return myTasks
-  }
-
-
-
-}
-
-
-function renderTasks(rendArr) {
-  container.innerHTML = ''
-   rendArr.forEach((task, index) => {
-    const div = document.createElement('div')
-    const divTxt = document.createElement('div')
-    const divBtn = document.createElement('div')
-    const taskName = document.createElement('div')
-    const taskDescrip = document.createElement('div')
-    const dueDate = document.createElement('div')
-    const prioDiv = document.createElement('div')
-    div.classList.add('s')
-    divTxt.classList.add('txtTask')
-    divBtn.classList.add('btnTask')
-    taskName.classList.add('taskname')
-    taskDescrip.classList.add('taskdes')
-    dueDate.classList.add('duedate')
-    prioDiv.classList.add('priotask')
-
-    Object.keys(task).forEach((prop) => {
-    if (prop === 'task') {
-      taskName.textContent = task[prop]
-    } else if (prop === 'desc') {
-      taskDescrip.textContent = task[prop]
-    } else if (prop === 'date') {
-      dueDate.textContent = 'Before:' + ' ' + task[prop]
-    } else if (prop === 'priority') {
-      prioDiv.textContent = `Priority:` + ' ' + task[prop]
-    }
-    })
-
-    if (task.done) {
-      div.classList.add('newone')
-    } else if (!task.done) {
-      div.classList.add('s')
-    }
-
-    container.append(div)
-    div.append(divTxt)
-    div.append(divBtn)
-    divTxt.append(taskName)
-    divTxt.append(taskDescrip)
-    divTxt.append(dueDate)
-    divTxt.append(prioDiv)
-    divBtn.appendChild(doneEffect(task, div, rendArr))
-    divBtn.append(createDelete(index, rendArr))
-   })
-   taskInput.value = ''
-   descInput.value = ''
-
-exitForm()
-}
-
+const addTask = document.querySelector('#addTask')
 addTask.addEventListener('click',() => {
   addtask(myTasks)
 })
 
-function createDelete(index, arr) {
-const removeBtn = document.createElement('button')
-removeBtn.textContent = 'Remove'
-  removeBtn.addEventListener('click', () => {
-    arr.splice(index, 1)
-renderTasks(arr)
-  })
-  return removeBtn
-}
-
-function doneEffect(task, had, thisa) {
-  const doneBtn = document.createElement('button')
-  doneBtn.textContent = 'Done'
-  doneBtn.addEventListener('click', () => {
-    if (task.done == false) {
-      task.done = true;
-      had.classList.add('newone')
-    } else if (task.done == true) {
-      task.done = false;
-      had.classList.add('s')
-    }
-   
-    renderTasks(thisa)
-  })
-  return doneBtn
-}
-
+const addProject = document.querySelector('.addProject')
   addProject.addEventListener('click', () => {
     let newArr =  inputProject.value
     let div = document.createElement('div')
@@ -228,85 +55,18 @@ function doneEffect(task, had, thisa) {
       nav.appendChild(div)
       myOptions.push(newArr)
       navDiv.push(newArr)
-  
-
       fillSelect()
       inputProject.value = ''
       hidePro()
     }
-    
-
- 
     return div
-   
-
   })
 
-function hidePro() {
-  inputProject.style.visibility = 'hidden'
-  addProject.style.visibility = 'hidden'
-
-  let proBtn = document.querySelector('.btnthis')
-  proBtn.style.visibility = 'visible'
-}
-
-function showPro() {
-  let proBtn = document.querySelector('.btnthis')
-  proBtn.style.visibility = 'hidden'
-
-  inputProject.style.visibility = 'visible'
-  addProject.style.visibility = 'visible'
-}
-
-function exitForm() {
-  formShow.style.visibility = "hidden"
-}
-function showForm() {
-  formShow.style.visibility = "visible"
-}
-
+const showProject = document.querySelector('.btnthis')
 showProject.addEventListener('click', showPro)
+
+const btnExit = document.querySelector('#exitform')
 btnExit.addEventListener('click', exitForm)
 
+const showBtn = document.getElementById('showBtn')
 showBtn.addEventListener('click', showForm)
-
-
-function Task(task, description, date, priority) {
-    this.task = task,
-    this.desc = description,
-    this.date = date,
-    this.priority = priority,
-    this.done = false
-}
-
-function addtask(thisArr) {
-    let taskpara = taskInput.value
-    let descriptionpara = descInput.value
-    let datee = inputDate.value
-    let priority = prioInput.value
-    let newTask = new Task(taskpara, descriptionpara, datee, priority)
-    calSelect(newTask)
-    
-    
- 
- 
-
-
-
-
- //   localStorage.setItem("myTasks", JSON.stringify(myTasks))
-taskInput.value = ''
-descInput.value = ''
-
-
-container.innerHTML = ''
-   renderTasks(thisArr)
-}
-
-
-// const localLeads = JSON.parse(localStorage.getItem("myTasks"))
-//     if (localLeads) {
-//         myTasks = localLeads
-//       
-//     }
-// 
