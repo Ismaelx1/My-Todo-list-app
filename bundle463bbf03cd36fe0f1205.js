@@ -611,7 +611,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-localStorage.clear();
+// localStorage.clear();
 
 const nav = document.querySelector('.navdiv')
 const showBtn = document.getElementById('showBtn')
@@ -664,7 +664,7 @@ let e = event.target
 
   }
 
-//  let playa = e.textContent
+
   let roro = navDiv.indexOf(e.textContent, 0)
 
 
@@ -711,24 +711,31 @@ function calSelect(newTask) {
 
   if (selectt.value === 'home') {
   myTasks.push(newTask)
+
+  localStorage.setItem("mytasks", JSON.stringify(myTasks))
   return myTasks
   } else if (selectt.value === '1') {
    
 
     proj0.push(newTask)
+    localStorage.setItem("mytasks0", JSON.stringify(proj0))
     return proj0
   } else if (selectt.value === '2') {
 
     proj1.push(newTask)
     return proj1
+    localStorage.setItem("mytasks1", JSON.stringify(proj1))
   } else if (selectt.value === '3') {
  
     proj2.push(newTask)
+    localStorage.setItem("mytasks2", JSON.stringify(proj2))
     return proj2
+ 
   } else if (selectt.value === '4') {
 
 
     proj3.push(newTask)
+    localStorage.setItem("mytasks3", JSON.stringify(proj3))
     return proj3
   } else {
 
@@ -903,7 +910,6 @@ function addtask(thisArr) {
 
 
 
- //   localStorage.setItem("myTasks", JSON.stringify(myTasks))
 taskInput.value = ''
 descInput.value = ''
 
@@ -913,14 +919,14 @@ container.innerHTML = ''
 }
 
 
-// const localLeads = JSON.parse(localStorage.getItem("myTasks"))
-//     if (localLeads) {
-//         myTasks = localLeads
-//       
-//     }
-// 
+ const localLeads = JSON.parse(localStorage.getItem("myTasks"))
+     if (localLeads) {
+         myTasks = localLeads
+       
+     }
+ 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle859050d12be2bc3cc134.js.map
+//# sourceMappingURL=bundle463bbf03cd36fe0f1205.js.map
