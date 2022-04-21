@@ -46,16 +46,13 @@ for (let i = 1; i <= myOptions.length; i++) {
 
 
 
-
 nav.addEventListener('click', () => {
 let e = event.target
 
   if (e.textContent === 'Home') {
     container.innerHTML = ''
     renderTasks(myTasks)
-    addTask.addEventListener('click',() => {
-      addtask(myTasks)
-    })
+
   }
 
 //  let playa = e.textContent
@@ -66,37 +63,74 @@ let e = event.target
     container.innerHTML = ''
     
     renderTasks(proj0)
-    addTask.addEventListener('click',() => {
-      addtask(proj0)
-    })
+ 
   } else if (roro == 2) {
     container.innerHTML = ''
     
     renderTasks(proj1)
-    addTask.addEventListener('click',() => {
-      addtask(proj1)
-    })
+
   } else if (roro == 3) {
     container.innerHTML = ''
     
     renderTasks(proj2)
-    addTask.addEventListener('click',() => {
-      addtask(proj2)
-    })
+
   } else if (roro == 4) {
     container.innerHTML = ''
     
     renderTasks(proj3)
-    addTask.addEventListener('click',() => {
-      addtask(proj3)
-    })
-  }
 
+  } else if (roro != 1 || roro != 2 || roro != 3 || roro != 4 || roro != 0) {
+    
+    renderTasks(myTasks)
+  }
+console.log(roro)
+}) 
+
+
+
+addTask.addEventListener('click', () => {
+ 
 })
 
 
 
+function calSelect(newTask) {
 
+  let selectt = document.getElementById('project')
+    
+
+
+  if (selectt.value === 'home') {
+  myTasks.push(newTask)
+  return myTasks
+  } else if (selectt.value === '1') {
+   
+
+    proj0.push(newTask)
+    return proj0
+  } else if (selectt.value === '2') {
+
+    proj1.push(newTask)
+    return proj1
+  } else if (selectt.value === '3') {
+ 
+    proj2.push(newTask)
+    return proj2
+  } else if (selectt.value === '4') {
+
+
+    proj3.push(newTask)
+    return proj3
+  } else {
+
+
+   myTasks.push(newTask)
+   return myTasks
+  }
+
+
+
+}
 
 
 function renderTasks(rendArr) {
@@ -251,47 +285,12 @@ function addtask(thisArr) {
     let datee = inputDate.value
     let priority = prioInput.value
     let newTask = new Task(taskpara, descriptionpara, datee, priority)
-    let selectt = document.getElementById('project')
+    calSelect(newTask)
     
-
+    
+ 
  
 
-
-
-  // if (selectt.value == 'home') {
-  //   myTasks.push(newTask)
-  // } else if (selectt.value == '1') {
-   //  proj0.push(newTask)
- //  } else if (selectt.value == '2') {
- //    proj1.push(newTask)
- //  } else if (selectt.value == '3') {
-  //   proj2.push(newTask)
- //  } else if (selectt.value == '4') {
- //    proj3.push(newTask)
- //  } else {
- //    myTasks.push(newTask)
- //  }
-
- //  switch(selectt.value) {
- //    case 'home': myTasks.push(newTask)
- //    break;
-// 
- //    case '1': proj0.push(newTask) 
-   //  break;
-
- //    case '2': proj1.push(newTask) 
-//     break;
-
- //    case '3': proj2.push(newTask) 
-   // break;
-
-  //   case '4': proj3.push(newTask) 
-  //   break;
-
- //    default: alert('Ho')
-
-
- //  }
 
 
 
@@ -303,6 +302,7 @@ descInput.value = ''
 container.innerHTML = ''
    renderTasks(thisArr)
 }
+
 
 // const localLeads = JSON.parse(localStorage.getItem("myTasks"))
 //     if (localLeads) {
