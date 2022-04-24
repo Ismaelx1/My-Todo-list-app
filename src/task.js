@@ -1,5 +1,6 @@
 import { myTasks, proj0, proj1, proj2, proj3 } from "./nav.js"
 import {renderTasks, createDelete, doneEffect} from './render.js'
+import { addProjectFunc, deletePro  } from "./visibility.js"
 
 export function Task(task, description, date, priority) {
   this.task = task,
@@ -12,7 +13,7 @@ export function Task(task, description, date, priority) {
 export function calSelect(newTask) {
   let selectt = document.getElementById('project')
 
-  if (selectt.value === 'home') {
+  if (selectt.value === 'Home') {
   myTasks.push(newTask)
     return myTasks
 
@@ -52,8 +53,8 @@ export function addtask(thisArr) {
     let priority = prioInput.value
     let newTask = new Task(taskpara, descriptionpara, datee, priority)
 
-  renderTasks(thisArr)
-    calSelect(newTask)
+  calSelect(newTask)
+    renderTasks(thisArr)
       taskInput.value = ''
         descInput.value = ''
           container.innerHTML = ''
