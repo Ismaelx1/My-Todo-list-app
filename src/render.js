@@ -61,7 +61,7 @@ export function renderTasks(rendArr) {
 export function createDelete(index, arr) {
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
-
+  removeBtn.classList.add('funcBtns-del')
   removeBtn.addEventListener('click', () => {
     arr.splice(index, 1);
     renderTasks(arr);
@@ -72,6 +72,7 @@ export function createDelete(index, arr) {
 export function doneEffect(task, had, thisa) {
   const doneBtn = document.createElement('button');
   doneBtn.textContent = 'Done';
+  doneBtn.classList.add('funcBtns-done');
   doneBtn.addEventListener('click', () => {
     if (task.done == false) {
       task.done = true;
@@ -90,7 +91,7 @@ function createEdit(index, rendArr) {
  
 
   
-
+  editBtn.classList.add('funcBtns-edit')
   editBtn.textContent = 'Edit';
   editBtn.addEventListener('click', () => {
     
@@ -104,12 +105,12 @@ showFormDetails(index, rendArr)
 function showFormDetails(index, rendArr) {
   const formZShow = document.querySelector('.formEdit');
   formZShow.style.visibility = "visible"
-
   const addtaskEdits = document.querySelector('#addTaskEd')
   let taskInput = document.querySelector('#taskNameEd');
   let descInput = document.querySelector('#taskDescEd');
   let dueDateInp = document.querySelector('#apptEd')
   let prioInp = document.querySelector('#priorityEd')
+  let btnExit = document.querySelector('#exitformEd')
 
   taskInput.value = rendArr[index].task
   descInput.value = rendArr[index].desc
@@ -127,6 +128,10 @@ addtaskEdits.addEventListener('click', () => {
   renderTasks(rendArr)
   formZShow.style.visibility = "hidden"
 
+})
+
+btnExit.addEventListener('click', () => {
+  formZShow.style.visibility = "hidden"
 })
 
 

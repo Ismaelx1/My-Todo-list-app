@@ -8,7 +8,7 @@ body {
 .header {
     width: 100vw;
     height: 20vh;
-    background-color: #090a23;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ body {
 .navdiv {
     width: 18vw;
     height: 82vh;
-    background-color: #090a23;
+    background-color: black;
     display: flex;
     flex-direction: column;
     border-top-right-radius: 10px;
@@ -44,7 +44,7 @@ body {
 .divnav {
     width: 18vw;
     height: 40px;
-    background-color: #090a23;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +60,12 @@ body {
 
 .divnav:hover {
     background-color: white;
-    color: #090a23;
+    color: black;
 }
 
 .divnav:focus {
     background-color: white;
-    color: #090a23;
+    color: black;
 }
 
 
@@ -97,7 +97,7 @@ flex-direction: column;
 .s {
     height: fit-content;
     width: 250px;
-    background-color: #090a23;
+    background-color: black;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -111,6 +111,7 @@ flex-direction: column;
 .newone {
     height: fit-content;
     width: 250px;
+    
     background: radial-gradient(circle, rgba(181,255,132,1) 0%, rgba(116,222,88,1) 48%, rgba(34,147,44,1) 100%);
     border-radius: 10px;
     margin-top: 10px;
@@ -137,6 +138,9 @@ flex-direction: column;
     font-style: italic;
     font-size: 25px;
     font-weight: bolder;
+    width: 220px;
+    overflow: hidden;
+    height: 30px;
 
 }
 
@@ -145,6 +149,10 @@ flex-direction: column;
     font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-size: 15px;
+    width: 220px;
+ overflow: hidden;
+ height: 30px;
+    
 
 
 }
@@ -170,12 +178,10 @@ flex-direction: column;
 }
 .btnTask {
   display: flex;
+  gap: 5px;
     
 }
-button {
-    height: 30px;
-    width: 78px;
-}
+
 .btn {
 display: flex;
 width: 60px;
@@ -209,7 +215,7 @@ margin: 0 auto;
 position: absolute;
 margin-top: 20px;
 margin-left: 550px;
-background-color: #090a23;
+background-color: black;
 background-size: cover;
 border-radius: 10px;
 text-align: center;
@@ -272,9 +278,10 @@ text-align: center;
     height: 60px;
 }
 
+
 .btnthis {
 border: 2px solid #ffffff ;
-background-color: #090a23;
+background-color: black;
 color: #ffffff;
 cursor: pointer;
 font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
@@ -296,7 +303,7 @@ height: fit-content;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #090a23;
+    background-color: black;
     height: 100%;
 }
 .navcontainer {
@@ -318,7 +325,7 @@ height: fit-content;
     visibility: hidden;
     border: none;
     cursor: pointer;
-    background-color: #090a23;
+    background-color: black;
     font-weight: bolder;
     border: 2px solid #ffffff;
 }
@@ -335,7 +342,7 @@ height: fit-content;
     border-bottom-right-radius: 8px;
     cursor: pointer;
     border: none;
-    background-color: #090a23;
+    background-color: black;
     color: #ffffff;
     font-size: larger;
     font-weight: bolder;
@@ -360,7 +367,7 @@ height: fit-content;
 position: absolute;
 margin-top: 20px;
 margin-left: 550px;
-background-color: #090a23;
+background-color: black;
 background-size: cover;
 border-radius: 10px;
 text-align: center;
@@ -414,4 +421,39 @@ text-align: center;
     padding-left: 5px;
  
    
+}
+
+#taskNameEd {
+    width: 400px;
+}
+#taskDescEd {
+    width: 350px;
+    height: 60px;
+}
+
+
+.funcBtns-del, .funcBtns-done, .funcBtns-edit {
+    height: 40px;
+    border-radius: 1px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Roboto Mono', 'Source Sans Pro', sans-serif;
+    background-color: black;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80px;
+
+}
+
+.funcBtns-del:hover, .funcBtns-done:hover, .funcBtns-edit:hover {
+    color: black;
+    background-color: white;
+}
+
+.funcBtns-edit {
+    border-bottom-right-radius: 10px;
+}
+.funcBtns-done {
+    border-bottom-left-radius: 10px;
 }
